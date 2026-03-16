@@ -2732,6 +2732,7 @@
           </p>
         </div>
         <form
+          id="contact-form"
           class="reveal d2"
           name="contact"
           method="POST"
@@ -3343,13 +3344,36 @@
       // ══════════════════════════════════════════
       // FORM
       // ══════════════════════════════════════════
-      function handleFormSubmit(e) {
-        e.preventDefault();
-        const btn = document.getElementById("submit-btn");
-        btn.textContent = "✓ Request sent! We'll be in touch within 24 hours.";
-        btn.style.background = "#2D2D2D";
-        btn.style.cursor = "default";
-        btn.disabled = true;
+      // ── CONTACT FORM: AJAX submission to Netlify ──
+      var contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var btn = document.getElementById('submit-btn');
+          btn.textContent = 'Sending…';
+          btn.disabled = true;
+          btn.style.opacity = '0.7';
+
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(contactForm)).toString()
+          })
+          .then(function() {
+            btn.textContent = '✓ Request sent! We\'ll be in touch within 24 hours.';
+            btn.style.background = '#1a1a1a';
+            btn.style.border = '1px solid rgba(232,98,26,0.4)';
+            btn.style.opacity = '1';
+            btn.style.cursor = 'default';
+            contactForm.reset();
+          })
+          .catch(function() {
+            btn.textContent = 'Something went wrong. Please try again.';
+            btn.style.background = '#cc3300';
+            btn.style.opacity = '1';
+            btn.disabled = false;
+          });
+        });
       }
 
       // ══════════════════════════════════════════
