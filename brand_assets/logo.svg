@@ -1,0 +1,36 @@
+<svg viewBox="0 0 200 230" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <!-- Head silhouette: profile facing left, stepped chin/jaw, neck step on right -->
+  <path fill="#E8621A" d="
+    M100,14
+    C148,12 180,48 180,92
+    C180,134 162,163 146,174
+    L146,196
+    L164,196
+    L164,218
+    L66,218
+    L66,202
+    L50,202
+    L50,182
+    L32,182
+    L32,168
+    C34,152 38,130 40,112
+    C44,88 52,62 64,46
+    C74,30 86,15 100,14
+    Z
+  "/>
+  <!-- Connection lines (zigzag: top-left→mid-left→mid-center→bot-center→bot-right) -->
+  <line x1="80" y1="76" x2="80" y2="96"  stroke="white" stroke-width="5.5" stroke-linecap="round"/>
+  <line x1="80" y1="96" x2="100" y2="96" stroke="white" stroke-width="5.5" stroke-linecap="round"/>
+  <line x1="100" y1="96" x2="100" y2="116" stroke="white" stroke-width="5.5" stroke-linecap="round"/>
+  <line x1="100" y1="116" x2="120" y2="116" stroke="white" stroke-width="5.5" stroke-linecap="round"/>
+  <!-- 3×3 grid of hollow circles -->
+  <circle cx="80"  cy="76"  r="7" stroke="white" stroke-width="5.5"/>
+  <circle cx="100" cy="76"  r="7" stroke="white" stroke-width="5.5"/>
+  <circle cx="120" cy="76"  r="7" stroke="white" stroke-width="5.5"/>
+  <circle cx="80"  cy="96"  r="7" stroke="white" stroke-width="5.5"/>
+  <circle cx="100" cy="96"  r="7" stroke="white" stroke-width="5.5"/>
+  <circle cx="120" cy="96"  r="7" stroke="white" stroke-width="5.5"/>
+  <circle cx="80"  cy="116" r="7" stroke="white" stroke-width="5.5"/>
+  <circle cx="100" cy="116" r="7" stroke="white" stroke-width="5.5"/>
+  <circle cx="120" cy="116" r="7" stroke="white" stroke-width="5.5"/>
+</svg>
