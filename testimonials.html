@@ -1,0 +1,2213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Client Reviews — Mindful Academy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #111; color: #fff; }
+    .font-display { font-family: 'Cormorant Garamond', serif; }
+
+    /* Nav */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(17,17,17,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #222; }
+
+    /* Cards */
+    .rev-card {
+      background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 16px;
+      overflow: hidden; break-inside: avoid; margin-bottom: 20px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .rev-card:hover { border-color: rgba(232,98,26,0.4); transform: translateY(-3px); }
+    .rev-card img { width: 100%; max-height: 220px; object-fit: cover; object-position: center top; display: block; background: #222; }
+    .rev-card img.screenshot { max-height: none; object-fit: contain; background: #1e1e1e; padding: 16px; }
+
+    /* Filter */
+    .filter-btn {
+      background: #1a1a1a; border: 1px solid #333; border-radius: 20px;
+      padding: 7px 16px; font-size: 13px; cursor: pointer; color: #aaa; font-weight: 500;
+      transition: all 0.15s; font-family: 'Inter', sans-serif;
+    }
+    .filter-btn:hover { border-color: #e8621a; color: #e8621a; }
+    .filter-btn.on { background: #e8621a; border-color: #e8621a; color: #fff; font-weight: 600; }
+    .rev-card.hidden { display: none; }
+
+    /* Masonry */
+    @media (min-width: 1024px) { .rev-grid { columns: 3; column-gap: 20px; } }
+    @media (min-width: 640px) and (max-width: 1023px) { .rev-grid { columns: 2; column-gap: 16px; } }
+    @media (max-width: 639px) { .rev-grid { columns: 1; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-xl font-bold text-white" style="text-decoration:none;">
+      Mindful <span style="color:#E8621A;">Academy</span>
+    </a>
+    <div class="flex items-center gap-6">
+      <a href="index.html" style="color:#aaa;font-size:14px;text-decoration:none;" onmouseover="this.style.color='#E8621A'" onmouseout="this.style.color='#aaa'">← Back to Home</a>
+      <a href="index.html#contact" style="background:#E8621A;color:#fff;padding:9px 20px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;" onmouseover="this.style.background='#F4884A'" onmouseout="this.style.background='#E8621A'">Book Free Demo →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="background:#1a1a1a;padding:72px 0 64px;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-150px;right:-150px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(232,98,26,0.15) 0%,transparent 65%);pointer-events:none;"></div>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;font-weight:600;color:#E8621A;margin-bottom:16px;">Client Reviews</p>
+    <h1 class="font-display font-bold" style="font-size:clamp(2.4rem,5vw,4rem);line-height:1.1;letter-spacing:-0.02em;margin-bottom:16px;">
+      Real Transformations.<br/><span style="color:#E8621A;">Real Results.</span>
+    </h1>
+    <p style="color:#aaa;font-size:1.05rem;line-height:1.8;max-width:560px;margin-bottom:36px;">Every story below is from a real leader who experienced a visible shift — many in just one session. Across 11 countries, 500+ leaders, every industry.</p>
+    <div style="display:flex;gap:32px;flex-wrap:wrap;">
+      <div><div class="font-display" style="font-size:2rem;font-weight:700;color:#E8621A;line-height:1;">97%</div><div style="font-size:13px;color:#666;margin-top:4px;">See a difference in session 1</div></div>
+      <div><div class="font-display" style="font-size:2rem;font-weight:700;color:#E8621A;line-height:1;">500+</div><div style="font-size:13px;color:#666;margin-top:4px;">Leaders transformed</div></div>
+      <div><div class="font-display" style="font-size:2rem;font-weight:700;color:#E8621A;line-height:1;">10+</div><div style="font-size:13px;color:#666;margin-top:4px;">Countries</div></div>
+      <div><div class="font-display" style="font-size:2rem;font-weight:700;color:#E8621A;line-height:1;">5,000+</div><div style="font-size:13px;color:#666;margin-top:4px;">People impacted</div></div>
+      <div><div class="font-display" style="font-size:2rem;font-weight:700;color:#E8621A;line-height:1;">200+</div><div style="font-size:13px;color:#666;margin-top:4px;">Publications featuring us</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div style="background:#161616;border-bottom:1px solid #222;padding:16px 0;position:sticky;top:61px;z-index:50;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center gap-3 flex-wrap">
+    <span style="font-size:13px;color:#666;margin-right:4px;">Filter:</span>
+    <button class="filter-btn on" onclick="filterRevs('all',this)">All (121)</button>
+    <button class="filter-btn" onclick="filterRevs('single',this)">Single Session</button>
+    <button class="filter-btn" onclick="filterRevs('career',this)">Career Breakthrough</button>
+    <button class="filter-btn" onclick="filterRevs('sleep',this)">Sleep & Stress</button>
+    <button class="filter-btn" onclick="filterRevs('confidence',this)">Confidence</button>
+    <button class="filter-btn" onclick="filterRevs('founder',this)">Founders</button>
+    <button class="filter-btn" onclick="filterRevs('flow',this)">Flow State</button>
+    <button class="filter-btn" onclick="filterRevs('happiness',this)">Happiness</button>
+    <button class="filter-btn" onclick="filterRevs('life',this)">Life</button>
+    <button class="filter-btn" onclick="filterRevs('stress',this)">Stress</button>
+    <span id="count" style="margin-left:auto;font-size:13px;color:#555;">Showing all 121 reviews</span>
+  </div>
+</div>
+
+<!-- REVIEWS GRID -->
+<section style="padding:52px 0 80px;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="rev-grid" id="rev-grid">
+
+      <!-- 1 -->
+      <div class="rev-card" data-tags="confidence sleep">
+        <img src="https://static.wixstatic.com/media/6143e2_f5bc022660574fc2b0ccfbddb6326fe0~mv2.jpg/v1/crop/x_0,y_17,w_828,h_1068/fill/w_478,h_616,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/London_edited.jpg" alt="Finding Connection in a New Land" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 London, UK</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">3 Sessions</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Finding Connection in a New Land</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Relocated to London for work — excitement faded into deep homesickness and depression. After just three sessions, my vibrant personality returned and the emptiness dissolved."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Professional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="rev-card" data-tags="confidence career">
+        <img src="https://static.wixstatic.com/media/6143e2_9e519916da2c4549b821f8a425333798~mv2.jpeg/v1/crop/x_19,y_0,w_809,h_785/fill/w_635,h_616,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/imposter.jpeg" alt="Reclaiming Confidence After Job Loss" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 London, UK</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">4–5 Month Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Reclaiming Confidence After Job Loss</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"A former MNC executive lost her job to stress-induced self-talk. After months in the program she rebuilt her confidence and stepped back into her power."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">🏢</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="rev-card" data-tags="confidence">
+        <img src="https://static.wixstatic.com/media/6143e2_c4dbacc030b7451ea9ba5309aec583dc~mv2.jpeg/v1/crop/x_0,y_0,w_825,h_916/fill/w_555,h_616,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/pregnant_ayushi.jpeg" alt="Embracing Motherhood with Confidence" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">New Mother</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Embracing Motherhood with Confidence</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Overwhelmed by anxieties about becoming a mother, which strained my marriage. The program gave me the grounding to step into parenthood with clarity and calm."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Professional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="rev-card" data-tags="sleep confidence">
+        <img src="https://static.wixstatic.com/media/6143e2_f7e45aa8eca645bcb96335dcad23bae5~mv2.jpeg/v1/crop/x_22,y_0,w_795,h_702/fill/w_542,h_479,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Therapist.jpeg" alt="From Burnout to Revitalized" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇮🇳 India</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Full Recovery</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">From Burnout to Revitalized</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Emotionally drained from holding space for others as a therapist. Reclaimed my energy and inner balance. My capacity to support others increased without depletion."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">🧠</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Therapist</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="rev-card" data-tags="confidence founder">
+        <img src="https://static.wixstatic.com/media/6143e2_43f3ff833d6f4ed195ac258f0457926b~mv2.jpeg/v1/crop/x_0,y_0,w_701,h_1280/fill/w_379,h_692,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/tanuja.jpeg" alt="From Self-Doubt to Abundance" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇮🇳 India</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Confidence Reset</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">From Self-Doubt to Abundance</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"An experienced life coach felt underconfident after a break. Through the program I reignited my inner power — feeling more confident and capable than ever."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">✨</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Life Coach</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="rev-card" data-tags="confidence career">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_c3c936be49514afb826b97deb5f75536~mv2.png/v1/crop/x_0,y_55,w_1334,h_384/fill/w_841,h_242,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-17%20at%202_12_45%20PM.png" alt="From Overwhelmed to Empowered" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Surrey, Canada</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">From Overwhelmed to Empowered</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"New country, new marriage, job uncertainty — all at once. Overcame anxiety, regained self-belief, landed a job, and launched my own bakery in Surrey."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Professional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="rev-card" data-tags="single confidence">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_6dd217a7fa044a849d4995744fca89b9~mv2.png/v1/crop/x_5,y_5,w_1330,h_229/fill/w_848,h_146,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-22%20at%209_59_41%20PM.png" alt="From Daily Struggle to Empowered Living" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">From Daily Struggle to Empowered Living</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Felt completely lost — disconnected from myself and buried under daily responsibilities. Reclaimed confidence, rediscovered my sense of self, and began living with clarity."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Professional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="rev-card" data-tags="single sleep">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_9fb4117c66da4430916012496310bbb7~mv2.png/v1/crop/x_0,y_21,w_1356,h_233/fill/w_856,h_147,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-22%20at%209_59_20%20PM.png" alt="From Restless to Relaxed" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇪🇸 Spain</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">From Restless to Relaxed</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"My mind raced even after work. In one session — deeper sleep and genuine insight into the thought patterns holding me captive."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">🏢</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="rev-card" data-tags="career confidence">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_5c2ae57bb44d418c913f45b6a9806bdc~mv2.png/v1/crop/x_108,y_0,w_1228,h_354/fill/w_841,h_242,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-17%20at%202_12_55%20PM.png" alt="From Self-Doubt to Director" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Career Breakthrough</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Breaking Barriers: From Self-Doubt to Director</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Struggled with deep unworthiness after moving to the US. Healed past trauma, regained confidence, and earned a promotion to Director."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">🏢</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director at MNC</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="rev-card" data-tags="career confidence">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_a2bed73726e04597912c4a364bc6cfe5~mv2.png/v1/crop/x_105,y_0,w_1226,h_384/fill/w_827,h_259,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-17%20at%202_08_31%20PM.png" alt="From Trauma to Triumph" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇮🇳 India</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Career Promotion</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">From Trauma to Triumph: QA Lead</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Carried childhood trauma affecting self-respect and career. Transformed my inner world — and received a well-deserved promotion to QA Lead."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💻</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">QA Lead</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="rev-card" data-tags="single confidence">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_97d07ebab88c440b9d048dc2471e8248~mv2.png/v1/fill/w_600,h_167,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6143e2_97d07ebab88c440b9d048dc2471e8248~mv2.png" alt="Rediscovering Patience" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Rediscovering Patience in 1 Session</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"A demanding job was straining my relationship with my children. In a single session, I experienced a noticeable and lasting increase in patience and mindfulness."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">📋</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Scrum Master</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="rev-card" data-tags="single confidence sleep">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_fbf6262bf4484ccdb42c8b82ccc26dfb~mv2.png/v1/fill/w_811,h_167,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/review3.png" alt="Quieting the Overactive Mind" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Quieting the Overactive Mind</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Successfully quieted an overactive mind in self-sabotage mode — in just one session. A profound shift toward inner calm and sustained self-trust."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Support</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="rev-card" data-tags="confidence">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_4a7deaa30bfd453d928d1f7ca1a4b0f1~mv2.png/v1/crop/x_0,y_27,w_1486,h_317/fill/w_811,h_173,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/review4.png" alt="From Disconnection to Self-Discovery" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Group Sessions</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">From Disconnection to Self-Discovery</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Felt deeply disconnected from myself, leading to a buildup of unresolved issues. Reconnected with my inner self and recommended group sessions to others."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Professional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="rev-card" data-tags="single sleep">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_171e31efd42a4ea3ae94fbc4c2804825~mv2.png/v1/crop/x_0,y_6,w_1480,h_316/fill/w_811,h_173,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/review5.png" alt="From Mental Chatter to Inner Peace" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">From Mental Chatter to Inner Peace</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Constant mental activity led to restlessness and disrupted sleep. In just one session — improved sleep and insight into the recurring thought patterns."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Professional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 15 -->
+      <div class="rev-card" data-tags="sleep">
+        <img src="https://static.wixstatic.com/media/6143e2_1e934d5f95f5487dbaa44ad8f2e725d2~mv2.png/v1/fill/w_811,h_442,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/review6.png" alt="Conquering 4-Year Insomnia" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 London, UK</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Sleep Restored</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Conquering 4-Year Insomnia</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Disrupted sleep for nearly four years from stress of marriage, children, and career. Significant sleep improvement after just one session."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">🏢</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 16 -->
+      <div class="rev-card" data-tags="confidence sleep">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_ec1cb11ab68d4e9091a68663b1c1f52e~mv2.png/v1/crop/x_0,y_4,w_1344,h_310/fill/w_821,h_190,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-22%20at%2010_00_49%20PM.png" alt="From Struggling to Thriving" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇮🇳 India</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Mental & Emotional</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">From Struggling to Thriving</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Once felt emotionally drained and mentally scattered. Now I navigate life's challenges with greater emotional stability and mental clarity."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">📊</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Sales Professional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 17 -->
+      <div class="rev-card" data-tags="confidence">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_a6c077d494dc468fbc5ee64c6b2f09b0~mv2.png/v1/crop/x_0,y_1,w_1356,h_313/fill/w_862,h_199,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-22%20at%2010_00_28%20PM.png" alt="From Frustration to Mental Freedom" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇮🇳 India</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Breakthrough</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">From Frustration to Mental Freedom</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Tried countless apps looking for peace — nothing worked. Finally experienced a breakthrough — learning to be fully present and at peace with myself."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">🏠</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Home Maker</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 18 -->
+      <div class="rev-card" data-tags="single sleep confidence">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_3855600ffee74b1a8ea25a1fbd1b874b~mv2.png/v1/crop/x_0,y_0,w_1251,h_268/fill/w_814,h_172,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-22%20at%2010_00_19%20PM.png" alt="Restless Nights to Renewed Confidence" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇮🇳 India</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Restless Nights to Renewed Confidence</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Struggled with disrupted sleep and wavering self-confidence. In one powerful session — improved sleep, more confident, waking up refreshed."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Professional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 19 -->
+      <div class="rev-card" data-tags="single confidence">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_ed51940208d449738b889896910e1e86~mv2.png/v1/crop/x_0,y_2,w_1360,h_251/fill/w_727,h_134,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-22%20at%2010_00_02%20PM.png" alt="Balanced Parent and Professional" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Balanced Parent & Professional</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Juggling intense job pressure while raising a toddler left me drained. After one session — more grounded, patient, and equipped to handle both with ease."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">IT Professional</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 20 -->
+      <div class="rev-card" data-tags="confidence">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_988794136db94cd3b8ba97553b5c831d~mv2.png/v1/crop/x_17,y_0,w_1105,h_208/fill/w_768,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-22%20at%209_59_51%20PM.png" alt="Experienced Meditator Breaks Through" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Advanced Practice</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Experienced Meditator Breaks Through</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Felt stuck in my meditation practice, unable to progress. Gained profound insights — broke through mental blocks and deepened my journey significantly."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">🧘</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Experienced Meditator</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 21 -->
+      <div class="rev-card" data-tags="single founder confidence">
+        <img class="screenshot" src="https://static.wixstatic.com/media/6143e2_78c0fa39b45f4c6dba711222da7795e9~mv2.png/v1/crop/x_0,y_14,w_1354,h_284/fill/w_777,h_163,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202025-03-22%20at%2010_00_11%20PM.png" alt="Skeptic to Transformed" loading="lazy" onerror="this.style.display='none'"/>
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇮🇳 India</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Skeptic to Transformed in 1 Session</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Tried meditation many times — restless mind made it impossible. In one session, finally experienced true calm, centeredness, and deep connection."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">🏠</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Business Owner</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 22 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">The Imposter Finally Left</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Spent three years walking into boardrooms feeling like a fraud. After one session, that voice went quiet. I've since led two major pitches without a single hesitation."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 23 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Speaking Up in the Room</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd filter every thought before saying it. Now I say what I mean, and people actually listen more."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP of Sales · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 24 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Shrinking Myself</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I kept making myself smaller so others wouldn't feel threatened. The shift happened fast and it's been permanent."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of People · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 25 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">No More Second-Guessing</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Every decision used to loop for hours. Now I trust my first instinct — and it's almost always right."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CTO · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 26 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇩🇪 Germany</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Walked Into My Promotion</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd been passed over twice because I didn't advocate for myself. After the session, I did. I got the role."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Principal Engineer · Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 27 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Voice in the Meeting</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I had the ideas but I sat silent. Three weeks after the session I presented to the entire leadership team."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of Product · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 28 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Apologising Constantly</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to apologise for existing in professional spaces. That's completely gone. I feel settled."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Managing Director · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 29 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Owned My Expertise</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Twelve years of experience and I still downplayed it. One session changed how I carry myself completely."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Senior Partner · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 30 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇳🇱 Netherlands</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Presenting Without Fear</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Public speaking used to trigger physical symptoms. Now I look forward to it."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">COO · Netherlands</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 31 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Asked for the Raise</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd been underpaid for four years because I couldn't ask. I asked. I got it. Wish I'd done this earlier."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP Marketing · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 32 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Lead Without Doubt</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I second-guessed every leadership call. My team noticed. Now I lead from clarity and they follow confidently."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 33 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped People-Pleasing</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I was exhausted from saying yes to everything. Now I have boundaries and people respect me more for it."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP of Sales · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 34 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Negotiated My First Contract</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I accepted whatever was offered. Not anymore. Negotiated a 30% increase on my first try."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of People · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 35 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Presence in the Room</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to disappear into the background. Now I take up space intentionally — and it feels natural."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CTO · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 36 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">First Keynote Done</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Turned down three speaking opportunities over two years. Accepted the fourth after the session. Standing ovation."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Principal Engineer · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 37 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇩🇪 Germany</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Rehearsing Conversations</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to plan every interaction three times over. Now I just show up."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of Product · Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 38 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Hired on the Spot</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"The confidence shift was visible. The interviewer commented on it. I started the following Monday."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Managing Director · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 39 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Ended the Comparison Loop</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd lost count of how many LinkedIn profiles I'd compared myself to. That stopped completely."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Senior Partner · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 40 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Steady Under Criticism</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Feedback used to ruin my week. Now I hear it, use it, and move on."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">COO · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 41 -->
+      <div class="rev-card" data-tags="confidence">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Finally Felt Senior</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Had the title for two years but never felt it. Now I inhabit the role completely."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP Marketing · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 42 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Four Hours Felt Like Twenty Minutes</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"First deep work session after the program — I couldn't believe the clock. The quality of output was different too."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CTO · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 43 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Inbox No Longer Controls Me</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to check email every eight minutes. Now I batch it twice a day without anxiety."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Principal Engineer · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 44 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇩🇪 Germany</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Best Code I've Ever Written</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I build software. The focus I have now produces cleaner, faster work. My senior says it shows."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of Product · Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 45 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Multitasking</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I thought multitasking was a skill. It wasn't. Doing one thing at a time has tripled my output."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP Engineering · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 46 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Writing Flows Now</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I've been stuck on the same report for a month. Finished it in one afternoon after the session."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Senior Analyst · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 47 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">The Noise Turned Off</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"There was always background static — random thoughts, to-dos, worries. It just stopped."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 48 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇳🇱 Netherlands</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Read a Full Book in a Weekend</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Hadn't finished a book in two years. Read 280 pages in two days. Comprehension was different too."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Product Manager · Netherlands</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 49 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Strategy Work Without Interruption</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I kept pulling myself out of deep thinking. Now I stay in it until the work is done."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Engineering Manager · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 50 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Meetings Are More Productive</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to drift during long meetings. Now I'm fully there. My inputs have improved noticeably."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CFO · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 51 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Finally Finished the Course</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Had an online course open for eight months. Completed it in four focused days."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Strategy Lead · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 52 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Presentations Land Better</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'm fully present when I present now. The audience responds completely differently."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CTO · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 53 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Checking My Phone</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Screen time down from six hours to under two. I don't even feel the urge anymore."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Principal Engineer · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 54 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Pipeline Review in Half the Time</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"My weekly review used to take the whole morning. Now I'm done in 90 minutes with better quality."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of Product · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 55 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">No More 3pm Slump</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to crash every afternoon. Now I'm sharp all the way through. No coffee required."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP Engineering · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 56 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇩🇪 Germany</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Deep Work at Will</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I can now enter a focused state on demand. This feels like a superpower honestly."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Senior Analyst · Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 57 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Client Proposals Improved</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"The quality of my thinking when I'm writing proposals is just different now. Clients notice."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 58 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇳🇱 Netherlands</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">First Creative Block Broken in Years</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'm a designer. Creative blocks destroyed my confidence. They're gone now."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Product Manager · Netherlands</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 59 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Coding Sessions Are Different</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Something shifted in how I process problems. Solutions come faster and feel more elegant."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Engineering Manager · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 60 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Morning Work Without Warming Up</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to need 45 minutes before I could think properly. Now I start immediately."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CFO · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 61 -->
+      <div class="rev-card" data-tags="flow">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Razor Sharp in Analysis</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"My financial models are cleaner. Fewer errors. Greater clarity. The team has commented."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Strategy Lead · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 62 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">First Sunday Without Dread</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Sunday anxiety had been with me for a decade. It didn't show up last week. Or this week."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 63 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Genuinely Laughed Again</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I didn't realise I'd stopped laughing — really laughing — until it came back."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of People · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 64 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Lighter Without Knowing Why</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Nothing in my life changed externally. But I feel lighter than I have in years."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">COO · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 65 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">The Constant Low-Level Sadness Lifted</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd normalised a permanent undercurrent of flatness. Gone now. I didn't know this was possible."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP of Marketing · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 66 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇩🇪 Germany</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Present with My Kids</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I was physically there but mentally absent. After the session I actually see them."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Chief of Staff · Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 67 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Waiting to Feel Ready</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I kept postponing enjoyment until some future version of my life. I live it now."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Managing Director · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 68 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Relationship Is Better</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"My partner noticed before I did. Something settled in me that was spilling into everything."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Senior Director · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 69 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Food Tastes Better</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"This sounds strange but everything is more vivid. More present. Even small things are enjoyable."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of Operations · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 70 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇳🇱 Netherlands</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">First Real Holiday in Years</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I've taken holidays but I've never actually been on one mentally. This summer was different."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Partner · Netherlands</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 71 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Chasing the Next Thing</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I've spent my career waiting for the next milestone. For the first time I don't need it."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">SVP · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 72 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">At Peace With the Past</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I've been carrying something from fifteen years ago. I don't feel it anymore."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 73 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Morning Without Heaviness</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to wake up with a weight on my chest. It's been three weeks and it hasn't come back."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of People · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 74 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Numbing</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I didn't realise how much I was using work and screens to avoid myself. Now I don't need to."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">COO · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 75 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Contentment Without Achievement</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I've achieved a lot. None of it made me content. This did."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP of Marketing · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 76 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇩🇪 Germany</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Fully Enjoyed My Own Birthday</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Sounds minor. I haven't been able to receive care without deflecting for fifteen years."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Chief of Staff · Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 77 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Warmth Came Back</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I had become cold — professionally functional but personally distant. That reversed."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Managing Director · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 78 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Excited About Mondays</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"First time in my career I've felt something other than dread at the start of the week."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Senior Director · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 79 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">My Team Noticed</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Three colleagues independently mentioned that I seemed different. Lighter. More approachable."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of Operations · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 80 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Justifying My Needs</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to apologise internally for wanting rest, pleasure, time. That just dissolved."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Partner · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 81 -->
+      <div class="rev-card" data-tags="happiness">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Quiet Mind at Night</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I've fallen asleep without racing thoughts for 21 nights in a row. That hasn't happened since university."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">SVP · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 82 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Resigned on My Own Terms</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd been meaning to leave for two years. After the session I handed in my notice calmly. Best decision."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Founder · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 83 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Said No to the Wrong Promotion</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Everyone expected me to take it. I knew it wasn't right. For the first time I trusted that."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CEO · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 84 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Moved to a Different City</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd been paralysed by the decision for three years. Made it, acted on it, haven't looked back."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Managing Director · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 85 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Started the Business</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"The idea existed for four years. Fear kept me stationary. One session later I filed the papers."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of People · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 86 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Left the Marriage Peacefully</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I had clarity on what I needed to do. I still had to do it. But I didn't do it in chaos."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 87 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Reconnected With My Father</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"We hadn't spoken in six years. I initiated. I'm not entirely sure what changed but something did."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Partner · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 88 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Finally Wrote the Book</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Had the outline for eighteen months. Wrote the first three chapters in one sitting after the session."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP Engineering · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 89 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇩🇪 Germany</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Moved On From the Failed Startup</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd been grieving it for two years without admitting it. The grief shifted in one session."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CTO · Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 90 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Applied for the Dream Role</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Told myself I wasn't ready. Applied anyway. Got it."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">COO · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 91 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">The Decade-Old Resentment Released</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I didn't try to forgive — I just noticed one day that the weight was gone."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Chief of Staff · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 92 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Drifting</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I had been living reactively for years. Something clicked and I started choosing deliberately."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Founder · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 93 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇳🇱 Netherlands</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Repaired the Friendship</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"A falling out from two years ago. I reached out. We talked. Something in me had settled enough to do it."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CEO · Netherlands</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 94 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Took the Sabbatical</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"My employer offered it three times. I finally said yes. It changed how I think about everything."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Managing Director · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 95 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Committed to the Relationship</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd been half-in for two years. The session helped me see why. I chose fully."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of People · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 96 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Made Peace with the Career Change</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I felt I'd wasted years in the wrong field. That story dissolved. I started fresh without the weight."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 97 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Chasing Validation</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Twenty years of seeking approval. One session to see that I never needed it."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Partner · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 98 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">The Grief Finally Moved</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Lost my mother two years ago. I wasn't letting myself process it properly. It moved."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP Engineering · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 99 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇩🇪 Germany</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Back to What I Actually Love</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Promoted myself out of the work I loved. Restructured my role to get back to it."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CTO · Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 100 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Raised the Difficult Topic</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"With my partner. Had been avoiding it for a year. Did it calmly and clearly. Game changer."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">COO · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 101 -->
+      <div class="rev-card" data-tags="life">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Chose Meaning Over Status</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Turned down the prestigious role for the meaningful one. No regret. Just clarity."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Chief of Staff · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 102 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">First Full Night's Sleep in Three Years</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Woke up without the adrenaline spike for the first time since my last role. One session."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CTO · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 103 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Shoulders Dropped</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"My physio asked what happened. I'd been carrying tension in my neck for years. It released."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of People · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 104 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Waking at 3am</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd wake up and my mind would immediately start running through problems. That stopped completely."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 105 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Calm During the Acquisition</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Our company was acquired. Normally this would destroy me for weeks. I stayed even."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP of Engineering · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 106 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Board Meeting Without Dread</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to spend the week before the board in a constant state of low-level panic. Not anymore."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CFO · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 107 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">The Chest Tightness Is Gone</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd had it for so long I thought it was just how I was built. It isn't."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">COO · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 108 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Responded, Not Reacted</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"CEO shouted at me in a meeting. I stayed calm. Responded clearly. He apologised."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Senior Director · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 109 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇩🇪 Germany</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">No More Panic Attacks</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I'd been having them on Sunday evenings for two years. Last eight Sundays — none."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Managing Director · Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 110 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Calm Through the Redundancy Round</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Half my team was let go. I helped everyone through it without breaking down myself."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP Operations · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 111 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇳🇱 Netherlands</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Jaw Stopped Clenching</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"My dentist noticed. Asked what stress management technique I'd added. Just this."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Engineering Manager · Netherlands</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 112 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Email No Longer Triggers Me</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to have a physical response to certain senders. Now it's just text."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CTO · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 113 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Managed the Crisis Quietly</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Product was down for six hours. I led the response without escalating internally. First time."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Head of People · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 114 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">No Cortisol Spike on Monday Mornings</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to dread the week before it even started. Sunday nights are peaceful now."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Director · Canada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 115 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇬🇧 United Kingdom</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Gave Difficult Feedback Calmly</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"I used to avoid it or deliver it badly. Now I do it clearly and it lands well."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP of Engineering · UK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 116 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇸🇬 Singapore</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Travel No Longer Triggers Anxiety</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Constant travel was a major stressor. The internal reaction has completely changed."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">CFO · Singapore</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 117 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Let the Deadline Go</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"A major deadline was missed. Normally I'd spiral for days. I course-corrected and moved on."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">COO · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 118 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇩🇪 Germany</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Held the Conversation With HR</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"The most stressful meeting of my career. I stayed in my body the whole way through."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Senior Director · Germany</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 119 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇦🇺 Australia</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Stopped Catastrophising</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"My default was always worst-case. That switch flipped and it hasn't flipped back."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Managing Director · Australia</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 120 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇺🇸 United States</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Heartrate Normalised</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"My doctor was monitoring it. Follow-up appointment: back in the normal range."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">VP Operations · US</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 121 -->
+      <div class="rev-card" data-tags="stress">
+        <div style="padding:18px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-size:11px;color:#E8621A;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;">🇨🇦 Canada</span>
+            <span style="background:rgba(232,98,26,0.15);color:#E8621A;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">1:1 Program</span>
+          </div>
+          <div style="color:#e8621a;font-size:13px;letter-spacing:2px;margin-bottom:8px;">★★★★★</div>
+          <h4 class="font-display" style="color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:8px;line-height:1.3;">Calm Through the Restructure</h4>
+          <p style="color:#aaa;font-size:13px;line-height:1.72;margin-bottom:14px;">"Eighteen months of organisational chaos. I was the steady one. That had never happened before."</p>
+          <div style="display:flex;align-items:center;gap:8px;padding-top:12px;border-top:1px solid #2a2a2a;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(232,98,26,0.12);display:flex;align-items:center;justify-content:center;font-size:12px;">💼</div>
+            <span style="font-size:13px;font-weight:600;color:#ccc;">Engineering Manager · Canada</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:#E8621A;padding:64px 0;text-align:center;">
+  <div class="max-w-2xl mx-auto px-6">
+    <h2 class="font-display font-bold" style="font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:12px;line-height:1.1;">Ready to Write Your Own Story?</h2>
+    <p style="color:rgba(255,255,255,0.85);font-size:1rem;line-height:1.75;margin-bottom:32px;">Join 500+ leaders who experienced a visible shift — starting from their very first session.</p>
+    <a href="index.html#contact" style="background:#fff;color:#C94E0F;padding:16px 36px;border-radius:12px;font-size:15px;font-weight:700;text-decoration:none;display:inline-block;transition:transform 0.1s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Book Your Free Demo Call →</a>
+  </div>
+</section>
+
+<footer style="background:#111;border-top:1px solid #1e1e1e;padding:32px 0;text-align:center;">
+  <a href="index.html" class="font-display" style="font-size:18px;font-weight:600;color:#fff;text-decoration:none;">Mindful <span style="color:#E8621A;">Academy</span></a>
+  <p style="color:#444;font-size:13px;margin-top:12px;">© 2026 Mindful Academy. All rights reserved.</p>
+</footer>
+
+<script>
+function filterRevs(tag, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  const cards = document.querySelectorAll('.rev-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const tags = card.dataset.tags || '';
+    const show = tag === 'all' || tags.includes(tag);
+    card.classList.toggle('hidden', !show);
+    if (show) visible++;
+  });
+  document.getElementById('count').textContent = tag === 'all'
+    ? 'Showing all 121 reviews'
+    : `Showing ${visible} review${visible !== 1 ? 's' : ''}`;
+}
+</script>
+</body>
+</html>

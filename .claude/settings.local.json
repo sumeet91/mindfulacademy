@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.mindfulacademy.io)",
+      "mcp__claude_ai_Wix__CallWixSiteAPI",
+      "mcp__claude_ai_Wix__SearchWixRESTDocumentation",
+      "Bash(python3 -:*)",
+      "Bash(node serve.mjs)",
+      "mcp__claude_ai_Wix__ListWixSites",
+      "mcp__claude_ai_Wix__WixREADME",
+      "mcp__claude_ai_Wix__ManageWixSite",
+      "Bash(awk 'NR>=1831 && NR<=1840' /Users/code/ReactNative/mindfulacademy/index.html)",
+      "Bash(awk 'NR>=1975 && NR<=1985' /Users/code/ReactNative/mindfulacademy/index.html)",
+      "Bash(python3:*)",
+      "WebFetch(domain:lottiefiles.com)",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://lottiefiles.com/free-animation/meditating-brain-PSwcFlfQD0\")",
+      "Bash(curl -s -A \"Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\" -H \"Accept-Language: en-US,en;q=0.5\" -H \"Referer: https://lottiefiles.com/\" \"https://lottiefiles.com/free-animation/meditating-brain-PSwcFlfQD0\")",
+      "WebFetch(domain:graphql.lottiefiles.com)",
+      "WebFetch(domain:assets10.lottiefiles.com)",
+      "WebFetch(domain:lottie.host)",
+      "WebSearch",
+      "WebFetch(domain:iconscout.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(lsof -ti:3000)",
+      "Bash(ls /Users/code/ReactNative/mindfulacademy/*.mjs)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000)"
+    ]
+  }
+}
