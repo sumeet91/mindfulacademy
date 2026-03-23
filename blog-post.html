@@ -9,18 +9,18 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
     * { box-sizing: border-box; }
-    body { background: #111; color: #eee; font-family: 'Inter', sans-serif; margin: 0; }
+    body { background: #FBF6F1; color: #2B2420; font-family: 'Inter', sans-serif; margin: 0; }
     .font-display { font-family: 'Cormorant Garamond', serif; }
 
-    nav a { color: #aaa; text-decoration: none; font-size: 14px; transition: color 0.2s; }
-    nav a:hover { color: #fff; }
+    nav a { color: #7A6B5D; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #C2703E; }
 
     /* Post body styles */
-    .post-body { color: #ccc; font-size: 1.05rem; line-height: 1.85; }
+    .post-body { color: #3D3028; font-size: 1.05rem; line-height: 1.85; }
     .post-body h1, .post-body h2, .post-body h3, .post-body h4 {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 700;
-      color: #fff;
+      color: #2B2420;
       letter-spacing: -0.02em;
       margin: 2em 0 0.6em;
       line-height: 1.2;
@@ -29,36 +29,36 @@
     .post-body h2 { font-size: 1.75rem; }
     .post-body h3 { font-size: 1.4rem; }
     .post-body p  { margin: 0 0 1.5em; }
-    .post-body a  { color: #E8621A; text-decoration: underline; text-underline-offset: 3px; }
-    .post-body a:hover { color: #ff7a35; }
+    .post-body a  { color: #C2703E; text-decoration: underline; text-underline-offset: 3px; }
+    .post-body a:hover { color: #A85A2A; }
     .post-body ul, .post-body ol { margin: 0 0 1.5em 1.5em; }
     .post-body li { margin-bottom: 0.5em; }
     .post-body blockquote {
-      border-left: 3px solid #E8621A;
+      border-left: 3px solid #C2703E;
       margin: 2em 0;
       padding: 16px 24px;
-      background: rgba(232,98,26,0.06);
+      background: rgba(194,112,62,0.06);
       border-radius: 0 8px 8px 0;
-      color: #ddd;
+      color: #3D3028;
       font-style: italic;
     }
     .post-body code {
-      background: #1e1e1e;
-      border: 1px solid #2a2a2a;
+      background: #F0EBE4;
+      border: 1px solid #E4DFD9;
       border-radius: 4px;
       padding: 2px 6px;
       font-size: 0.9em;
-      color: #E8621A;
+      color: #A85A2A;
     }
     .post-body pre {
-      background: #1a1a1a;
-      border: 1px solid #2a2a2a;
+      background: #2B2420;
+      border: 1px solid #3A3230;
       border-radius: 10px;
       padding: 20px 24px;
       overflow-x: auto;
       margin: 1.5em 0;
     }
-    .post-body pre code { background: none; border: none; padding: 0; color: #ccc; }
+    .post-body pre code { background: none; border: none; padding: 0; color: #FBF6F1; }
     .post-body img {
       width: 100%;
       border-radius: 12px;
@@ -66,54 +66,55 @@
     }
     .post-body hr {
       border: none;
-      border-top: 1px solid #2a2a2a;
+      border-top: 1px solid #E4DFD9;
       margin: 2.5em 0;
     }
 
-    #loading { text-align:center; color:#555; padding:120px 0; font-size:15px; }
-    #error   { text-align:center; color:#555; padding:120px 0; }
+    #loading { text-align:center; color:#7A6B5D; padding:120px 0; font-size:15px; }
+    #error   { text-align:center; color:#7A6B5D; padding:120px 0; }
   </style>
 </head>
 <body>
 
   <!-- NAV -->
-  <nav style="border-bottom: 1px solid #1e1e1e; padding: 20px 0; position: sticky; top: 0; background: rgba(17,17,17,0.95); backdrop-filter: blur(12px); z-index: 100;">
+  <nav style="border-bottom: 1px solid #E4DFD9; padding: 20px 0; position: sticky; top: 0; background: rgba(251,246,241,0.95); backdrop-filter: blur(12px); z-index: 100;">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between;">
       <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
         <img src="/brand_assets/logo.svg" alt="Mindful Academy Logo" style="height:36px;width:auto;" />
-        <span style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.02em;">Mindful Academy</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:#2B2420;letter-spacing:-0.02em;">Mindful Academy</span>
       </a>
       <div style="display:flex; align-items:center; gap:32px;">
         <a href="/">Home</a>
-        <a href="/blog.html" style="color:#fff;">Blog</a>
-        <a href="/#contact" style="background:#E8621A; color:#fff; padding:8px 20px; border-radius:8px; font-size:13px; font-weight:600;">Apply →</a>
+        <a href="/blog.html" style="color:#C2703E;font-weight:600;">Blog</a>
+        <a href="/#contact" style="background:#C2703E; color:#fff; padding:8px 20px; border-radius:8px; font-size:13px; font-weight:600; transition:background 0.2s;"
+           onmouseover="this.style.background='#A85A2A'" onmouseout="this.style.background='#C2703E'">Apply →</a>
       </div>
     </div>
   </nav>
 
   <div id="loading">Loading…</div>
   <div id="error" style="display:none;">
-    <p style="font-family:'Cormorant Garamond',serif; font-size:2rem; color:#444; margin-bottom:12px;">Post not found.</p>
-    <a href="/blog.html" style="color:#E8621A; font-size:14px;">← Back to Blog</a>
+    <p style="font-family:'Cormorant Garamond',serif; font-size:2rem; color:#7A6B5D; margin-bottom:12px;">Post not found.</p>
+    <a href="/blog.html" style="color:#C2703E; font-size:14px;">← Back to Blog</a>
   </div>
 
   <article id="post" style="display:none; max-width: 740px; margin: 0 auto; padding: 64px 24px 120px;">
 
     <!-- Back link -->
-    <a href="/blog.html" style="display:inline-flex; align-items:center; gap:6px; color:#666; font-size:13px; text-decoration:none; margin-bottom:48px; transition:color 0.2s;"
-       onmouseover="this.style.color='#E8621A'" onmouseout="this.style.color='#666'">
+    <a href="/blog.html" style="display:inline-flex; align-items:center; gap:6px; color:#7A6B5D; font-size:13px; text-decoration:none; margin-bottom:48px; transition:color 0.2s;"
+       onmouseover="this.style.color='#C2703E'" onmouseout="this.style.color='#7A6B5D'">
       ← Back to Blog
     </a>
 
     <!-- Meta -->
     <div style="margin-bottom:32px;">
-      <span style="display:inline-block; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#E8621A; background:rgba(232,98,26,0.1); border:1px solid rgba(232,98,26,0.2); border-radius:20px; padding:4px 12px; margin-bottom:20px;">Insights</span>
-      <h1 id="post-title" class="font-display" style="font-size: clamp(2rem, 5vw, 3.2rem); font-weight:700; color:#fff; line-height:1.1; letter-spacing:-0.03em; margin:0 0 20px;"></h1>
+      <span style="display:inline-block; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#C2703E; background:rgba(194,112,62,0.08); border:1px solid rgba(194,112,62,0.2); border-radius:20px; padding:4px 12px; margin-bottom:20px;">Insights</span>
+      <h1 id="post-title" class="font-display" style="font-size: clamp(2rem, 5vw, 3.2rem); font-weight:700; color:#2B2420; line-height:1.1; letter-spacing:-0.03em; margin:0 0 20px;"></h1>
       <div style="display:flex; align-items:center; gap:16px;">
-        <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#E8621A,#ff9a5c); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; color:#fff;">M</div>
+        <div style="width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#C2703E,#D4895C); display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; color:#fff;">M</div>
         <div>
-          <p style="font-size:13px; color:#fff; font-weight:500; margin:0;">Mindful Academy</p>
-          <p id="post-date" style="font-size:12px; color:#555; margin:0;"></p>
+          <p style="font-size:13px; color:#2B2420; font-weight:500; margin:0;">Mindful Academy</p>
+          <p id="post-date" style="font-size:12px; color:#A89C94; margin:0;"></p>
         </div>
       </div>
     </div>
@@ -124,25 +125,25 @@
     </div>
 
     <!-- Divider -->
-    <div style="border-top:1px solid #2a2a2a; margin-bottom:40px;"></div>
+    <div style="border-top:1px solid #E4DFD9; margin-bottom:40px;"></div>
 
     <!-- Body -->
     <div id="post-body" class="post-body"></div>
 
     <!-- Bottom CTA -->
-    <div style="margin-top:64px; padding:36px; background:#1a1a1a; border:1px solid rgba(232,98,26,0.2); border-radius:16px; text-align:center;">
-      <p class="font-display" style="font-size:1.6rem; font-weight:700; color:#fff; margin-bottom:12px; letter-spacing:-0.02em;">Ready to operate from peak state?</p>
-      <p style="color:#888; font-size:14px; margin-bottom:24px; line-height:1.65;">Experience it yourself in a 60-minute live session.</p>
-      <a href="/#contact" style="display:inline-block; background:#E8621A; color:#fff; padding:12px 28px; border-radius:10px; font-size:14px; font-weight:600; text-decoration:none; transition:background 0.2s;"
-         onmouseover="this.style.background='#d4561a'" onmouseout="this.style.background='#E8621A'">
+    <div style="margin-top:64px; padding:36px; background:#FFFFFF; border:1px solid #E4DFD9; border-radius:16px; text-align:center;">
+      <p class="font-display" style="font-size:1.6rem; font-weight:700; color:#2B2420; margin-bottom:12px; letter-spacing:-0.02em;">Ready to operate from peak state?</p>
+      <p style="color:#7A6B5D; font-size:14px; margin-bottom:24px; line-height:1.65;">Experience it yourself in a 60-minute live session.</p>
+      <a href="/#contact" style="display:inline-block; background:#C2703E; color:#fff; padding:12px 28px; border-radius:10px; font-size:14px; font-weight:600; text-decoration:none; transition:background 0.2s;"
+         onmouseover="this.style.background='#A85A2A'" onmouseout="this.style.background='#C2703E'">
         Apply for Demo Session →
       </a>
     </div>
   </article>
 
   <!-- FOOTER -->
-  <footer style="border-top:1px solid #1e1e1e; padding:40px 24px; text-align:center;">
-    <p style="color:#444; font-size:13px;">© 2026 Mindful Academy. All rights reserved.</p>
+  <footer style="border-top:1px solid #E4DFD9; padding:40px 24px; text-align:center; background:#FFFFFF;">
+    <p style="color:#7A6B5D; font-size:13px;">© 2026 Mindful Academy. All rights reserved.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -176,7 +177,6 @@
       const slug   = params.get('post');
       if (!slug) { showError(); return; }
 
-      // Update page title as we load
       document.title = 'Loading… — Mindful Academy';
 
       try {
@@ -184,7 +184,7 @@
         const res = await fetch(url);
         if (!res.ok) { showError(); return; }
 
-        const text         = await res.text();
+        const text           = await res.text();
         const { meta, body } = parseFrontmatter(text);
 
         document.title = `${meta.title || 'Post'} — Mindful Academy`;
@@ -193,8 +193,8 @@
         document.getElementById('post-body').innerHTML    = marked.parse(body);
 
         if (meta.image) {
-          document.getElementById('post-image').src       = meta.image;
-          document.getElementById('post-image').alt       = meta.title || '';
+          document.getElementById('post-image').src              = meta.image;
+          document.getElementById('post-image').alt              = meta.title || '';
           document.getElementById('post-image-wrap').style.display = 'block';
         }
 
