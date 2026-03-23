@@ -703,6 +703,103 @@
       @media (max-width: 767px) {
         .wte-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
       }
+
+      /* ══ G4: MOBILE READABILITY GLOBALS ══ */
+      @media (max-width: 767px) {
+
+        /* Body text: minimum 16px, comfortable line-height */
+        body { font-size: 16px; line-height: 1.65; }
+
+        /* Prevent iOS from zooming on input focus */
+        .field, input, textarea, select { font-size: 16px !important; }
+
+        /* Headings: floor at 20px (h2) / 18px (h3/h4) */
+        h2, .font-display[style*="clamp"] {
+          font-size: clamp(1.35rem, 7vw, 2.5rem) !important;
+          line-height: 1.15 !important;
+        }
+        h3 { font-size: clamp(1.15rem, 5vw, 1.5rem) !important; }
+        h4 { font-size: clamp(1.05rem, 4.5vw, 1.2rem) !important; }
+
+        /* Body copy inside sections: ensure 16px floor */
+        p, li { font-size: 1rem !important; line-height: 1.7 !important; }
+
+        /* Card body copy (often 13px) */
+        .card p, .card div[style*="font-size:13px"],
+        div[style*="font-size:13px"], div[style*="font-size: 13px"],
+        p[style*="font-size:13px"], p[style*="font-size: 13px"] {
+          font-size: 15px !important;
+          line-height: 1.7 !important;
+        }
+
+        /* Horizontal padding on all text containers */
+        .max-w-7xl, .max-w-5xl, .max-w-4xl, .max-w-3xl, .max-w-2xl {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+
+        /* Programs: stack to single column */
+        #programs .grid { grid-template-columns: 1fr !important; }
+        #programs .max-w-3xl { max-width: 100% !important; }
+
+        /* Clients: 2-col on mobile (logos are small, 3 is too tight) */
+        #clients-grid, .grid-cols-3.sm\:grid-cols-4.lg\:grid-cols-6 {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+
+        /* Testimonials: single column */
+        #testimonials .grid { grid-template-columns: 1fr !important; }
+
+        /* How It Works: single column */
+        .grid.md\:grid-cols-3 { grid-template-columns: 1fr !important; }
+
+        /* Guarantee trio: single column */
+        .grid.md\:grid-cols-3.gap-8 { grid-template-columns: 1fr !important; }
+
+        /* Mission CI preview: full width */
+        #about .max-w-5xl { padding-left: 20px !important; padding-right: 20px !important; }
+
+        /* Buttons: minimum 48px height, full width on mobile */
+        .btn-primary, .btn-outline {
+          min-height: 48px !important;
+          width: 100% !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+        }
+        /* Except nav buttons — keep compact */
+        nav .btn-primary, nav .btn-outline,
+        #navbar .btn-primary, #navbar .btn-outline {
+          width: auto !important;
+          min-height: unset !important;
+        }
+
+        /* FAQ items: larger touch targets */
+        .faq-toggle { min-height: 56px !important; padding: 16px 20px !important; }
+        .faq-toggle span:first-child { font-size: 15px !important; }
+
+        /* Stats bar: 2 col grid on mobile (already set, reinforce) */
+        #stats-bar .grid { grid-template-columns: repeat(2, 1fr) !important; gap: 20px !important; }
+
+        /* Section label pills: keep at 11px (they're uppercase, legible small) */
+        p[style*="letter-spacing:0.12em"], p[style*="letter-spacing: 0.12em"] {
+          font-size: 11px !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        /* Hierarchy bar: wrap on very small screens */
+        div[style*="inline-flex"][style*="border-radius:40px"] {
+          display: flex !important;
+          flex-direction: column !important;
+          border-radius: 14px !important;
+          align-items: stretch !important;
+          width: 100% !important;
+        }
+        div[style*="inline-flex"][style*="border-radius:40px"] > div:nth-child(even) {
+          display: none !important;
+        }
+      }
     </style>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
@@ -1024,7 +1121,7 @@
               text-align: center;
             "
           >
-            Constructive Human Intelligence (CHI) — the framework behind 500+ leadership transformations across 10+ countries.
+            Constructive Human Intelligence — the framework behind 500+ leadership transformations across 10+ countries.
           </p>
 
           <!-- CTAs -->
@@ -1148,7 +1245,7 @@
         <div class="text-center reveal d1" style="margin-bottom:48px;">
           <p style="font-size:11px;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;color:#C2703E;margin-bottom:14px;">Who We Work With</p>
           <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;color:#2B2420;line-height:1.08;letter-spacing:-0.03em;margin-bottom:16px;">Two Tracks. One Transformation.</h2>
-          <p style="color:#6b5e58;font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;">Whether you're a leader seeking personal transformation or an organisation building a high-performance culture — the CHI framework delivers measurable results from Day 1.</p>
+          <p style="color:#6b5e58;font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;">Whether you're a leader seeking personal transformation or an organisation building a high-performance culture — our framework delivers measurable results from Day 1.</p>
         </div>
 
         <!-- Tab Switcher -->
@@ -1798,7 +1895,7 @@
 
         <!-- Header -->
         <div class="text-center reveal d1" style="margin-bottom:64px;">
-          <p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;font-weight:600;color:#C2703E;margin-bottom:16px;">The CHI Programs</p>
+          <p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;font-weight:600;color:#C2703E;margin-bottom:16px;">Our Programs</p>
           <h2 class="font-display font-bold" style="color:#2B2420;font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.1;letter-spacing:-0.03em;margin-bottom:16px;">Built Around Your Intelligence, Not a Generic Curriculum</h2>
           <p style="color:#6b5e58;font-size:1.05rem;line-height:1.7;max-width:540px;margin:0 auto;">Every program begins with a Diagnose phase — identifying which destructive intelligence patterns are active before a single session is designed.</p>
         </div>
@@ -1812,15 +1909,15 @@
           </div>
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            <!-- Card 1: The CHI Foundation -->
+            <!-- Card 1: The Foundation Program -->
             <div class="card reveal d1" style="background:#fff;border-radius:20px;overflow:hidden;border:1px solid #E4DFD9;">
               <div style="height:140px;background:#2B2420;position:relative;overflow:hidden;">
-                <img src="https://placehold.co/400x140/2B2420/C2703E?text=CHI+Foundation" alt="The CHI Foundation" style="width:100%;height:100%;object-fit:cover;opacity:0.45;">
+                <img src="https://placehold.co/400x140/2B2420/C2703E?text=Foundation" alt="The Foundation Program" style="width:100%;height:100%;object-fit:cover;opacity:0.45;">
                 <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(43,36,32,0.9),transparent);"></div>
                 <span style="position:absolute;bottom:12px;left:16px;background:rgba(194,112,62,0.92);color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;">Foundation</span>
               </div>
               <div style="padding:22px;">
-                <h3 class="font-display font-semibold" style="color:#2B2420;font-size:1.15rem;margin-bottom:8px;">The CHI Foundation</h3>
+                <h3 class="font-display font-semibold" style="color:#2B2420;font-size:1.15rem;margin-bottom:8px;">The Foundation Program</h3>
                 <p style="color:#6b5e58;font-size:13px;line-height:1.7;margin-bottom:16px;">The entry point to Constructive Human Intelligence. Teams identify their dominant destructive patterns — the Always-On Mind, Stress Conditioning, and Reactive Loops — and experience the first measurable shift in the opening session.</p>
                 <div style="display:flex;align-items:center;justify-content:space-between;">
                   <span style="color:#aaa;font-size:12px;">Team · Live Sessions</span>
@@ -1872,7 +1969,7 @@
               </div>
               <div style="padding:22px;">
                 <h3 class="font-display font-semibold" style="color:#2B2420;font-size:1.15rem;margin-bottom:8px;">Flow States &amp; Deep Work</h3>
-                <p style="color:#6b5e58;font-size:13px;line-height:1.7;margin-bottom:16px;">The highest-performing 1% don't work harder — they access states others can't. Built on the CHI framework's third stage, this program trains teams to enter deep focus on demand and produce their highest-quality output consistently.</p>
+                <p style="color:#6b5e58;font-size:13px;line-height:1.7;margin-bottom:16px;">The highest-performing 1% don't work harder — they access states others can't. Built on the Constructive Intelligence framework's third stage, this program trains teams to enter deep focus on demand and produce their highest-quality output consistently.</p>
                 <div style="display:flex;align-items:center;justify-content:space-between;">
                   <span style="color:#aaa;font-size:12px;">Team · Intensive</span>
                   <a href="#contact" style="color:#C2703E;font-size:12px;font-weight:600;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Enroll →</a>
@@ -1921,7 +2018,7 @@
               </div>
               <div style="padding:22px;">
                 <h3 class="font-display font-semibold" style="color:#2B2420;font-size:1.15rem;margin-bottom:8px;">Mastering Life <em style="font-weight:400;">(1:1)</em></h3>
-                <p style="color:#6b5e58;font-size:13px;line-height:1.7;margin-bottom:16px;">You've achieved what most people only dream of — and something still feels off. The overthinking doesn't stop. The self-doubt surfaces at the worst moments. This program is a full CHI deep-dive into <em>why your own intelligence is working against you</em> — and how to permanently dismantle it.</p>
+                <p style="color:#6b5e58;font-size:13px;line-height:1.7;margin-bottom:16px;">You've achieved what most people only dream of — and something still feels off. The overthinking doesn't stop. The self-doubt surfaces at the worst moments. This program is a full Constructive Intelligence deep-dive into <em>why your own intelligence is working against you</em> — and how to permanently dismantle it.</p>
                 <div style="display:flex;align-items:center;justify-content:space-between;">
                   <span style="color:#aaa;font-size:12px;">Individual · 1:1 Sessions</span>
                   <a href="#contact" style="color:#C2703E;font-size:12px;font-weight:600;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Enroll →</a>
@@ -2529,7 +2626,7 @@
               <span class="faq-icon" style="color:#7A6B5D;font-size:22px;line-height:1;flex-shrink:0;margin-left:16px;">+</span>
             </button>
             <div class="faq-body" style="padding:0 24px;">
-              <p style="color:#7A6B5D;font-size:14px;line-height:1.75;padding-bottom:20px;">Enterprise programs are designed for leadership teams and organisations — the work is deployed across your team, mapped to your culture, and measured against business metrics like decision velocity, attrition risk, and engagement scores. Individual programs are for founders, executives, and leaders seeking personal transformation — working privately on the destructive patterns blocking their own peak performance. Both tracks use the same CHI methodology. The scope and delivery differ.</p>
+              <p style="color:#7A6B5D;font-size:14px;line-height:1.75;padding-bottom:20px;">Enterprise programs are designed for leadership teams and organisations — the work is deployed across your team, mapped to your culture, and measured against business metrics like decision velocity, attrition risk, and engagement scores. Individual programs are for founders, executives, and leaders seeking personal transformation — working privately on the destructive patterns blocking their own peak performance. Both tracks use the same Constructive Intelligence methodology. The scope and delivery differ.</p>
             </div>
           </div>
 
@@ -2950,7 +3047,7 @@
             <h5 style="font-size:11px;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;color:#fff;margin-bottom:4px;">For Organizations</h5>
             <p style="font-size:10px;color:#C2703E;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;margin-bottom:14px;">Enterprise &amp; Teams</p>
             <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-              <li><a href="#programs" style="color:#666;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#C2703E'" onmouseout="this.style.color='#666'">The CHI Foundation</a></li>
+              <li><a href="#programs" style="color:#666;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#C2703E'" onmouseout="this.style.color='#666'">The Foundation Program</a></li>
               <li><a href="#programs" style="color:#666;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#C2703E'" onmouseout="this.style.color='#666'">From Stress to Signal</a></li>
               <li><a href="#programs" style="color:#666;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#C2703E'" onmouseout="this.style.color='#666'">High-Stakes Team Calibration</a></li>
               <li><a href="#programs" style="color:#666;font-size:13px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#C2703E'" onmouseout="this.style.color='#666'">Flow States &amp; Deep Work</a></li>
