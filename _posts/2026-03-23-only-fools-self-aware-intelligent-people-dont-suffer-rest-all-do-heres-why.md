@@ -2,7 +2,7 @@
 title: Only Fools & Self-Aware Intelligent People Don't Suffer. Rest all do.
   (Here's Why)
 date: 2026-03-23T20:26:00.000+05:30
-image: ""
+image: /images/uploads/overthink.jpg
 excerpt: Intelligence without awareness doesn't solve problems—it manufactures
   them. Explore why "the ones in the middle" suffer the most and how the simple
   act of observation without judgment can collapse self-created mental
