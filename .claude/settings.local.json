@@ -24,7 +24,20 @@
       "Bash(lsof -ti:3000)",
       "Bash(ls /Users/code/ReactNative/mindfulacademy/*.mjs)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
-      "Bash(curl -s http://localhost:3000)"
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(sed -n '1553,1560p' /Users/code/ReactNative/mindfulacademy/index.html)",
+      "Bash(sed -n '1632,1640p' /Users/code/ReactNative/mindfulacademy/index.html)",
+      "Bash(sed -n '1998,2010p' /Users/code/ReactNative/mindfulacademy/index.html)",
+      "Bash(sed -n '2315,2325p' /Users/code/ReactNative/mindfulacademy/index.html)",
+      "Bash(sed -n '2622,2632p' /Users/code/ReactNative/mindfulacademy/index.html)",
+      "Bash(sed -n '1998,2005p' /Users/code/ReactNative/mindfulacademy/index.html)",
+      "Bash(sed -n '2318,2325p' /Users/code/ReactNative/mindfulacademy/index.html)",
+      "Bash(sed -n '2627,2634p' /Users/code/ReactNative/mindfulacademy/index.html)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)"
     ]
   }
 }
