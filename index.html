@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mindful Academy — Human Intelligence Transformation for Leaders & Teams</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Meta Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '966718952464901');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=966718952464901&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
@@ -53,7 +66,7 @@
         }
       }
       .ticker-track {
-        animation: ticker 35s linear infinite;
+        animation: ticker 80s linear infinite;
       }
       .ticker-track:hover {
         animation-play-state: paused;
@@ -639,10 +652,9 @@
         /* Footer grid: stack to 1 col on small screens */
         .footer-grid { grid-template-columns: 1fr !important; }
 
-        /* WTE brain scan: stack on mobile */
-        #what-to-expect .wte-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
-        #what-to-expect #wte-pill-list { grid-template-columns: 1fr 1fr !important; }
-        #what-to-expect #wte-btn-after { font-size: 9px !important; padding: 9px 12px !important; }
+        /* WTE domain table: stack on mobile */
+        #what-to-expect .wte-domain-cols { grid-template-columns: 1fr !important; }
+        #what-to-expect .wte-domain-cols .wte-col-after { border-left: none !important; padding-left: 0 !important; border-top: 2px solid #C2703E; padding-top: 12px !important; }
 
         /* Featured ticker: slightly smaller text */
         .ticker-track span { font-size: 12px !important; }
@@ -1046,7 +1058,7 @@
                 display: inline-block;
               "
             ></span>
-            Constructive Human Intelligence for Leaders &amp; Organizations
+            Metacognitive Intelligence for Leaders &amp; Organisations
           </div>
 
           <!-- Animated split-text headline -->
@@ -1054,8 +1066,8 @@
             id="hero-headline"
             class="font-display font-bold text-white"
             style="
-              font-size: clamp(3rem, 7.5vw, 6rem);
-              line-height: 1.04;
+              font-size: clamp(2rem, 5vw, 3.8rem);
+              line-height: 1.08;
               letter-spacing: -0.03em;
               margin-bottom: 28px;
             "
@@ -1089,9 +1101,9 @@
               <span class="shimmer-text" style="font-weight: 700"
                 >only company in the world</span
               >
-              proven to demonstrate peak performance states—
+              proven to train metacognition —
               <span style="color: #C2703E; font-weight: 700"
-                >in your very demo call</span
+                >the highest state of intelligence — live, in your demo call</span
               >.
             </p>
           </div>
@@ -1108,21 +1120,22 @@
               text-align: center;
             "
           >
-            Chaotic mind → Superhuman Flow States &amp; Deep Life Fulfillment &nbsp;|&nbsp; From Day 1
+            Train your metacognition — the highest state of intelligence. See the patterns keeping you stuck for decades. <span style="color:#D4895C;font-weight:600;">Dissolve them.</span>
           </p>
-          <p
-            class="hero-sub"
-            style="
-              color: #aaaaaa;
-              font-size: clamp(0.9rem, 1.5vw, 1rem);
-              line-height: 1.75;
-              max-width: 600px;
-              margin: 0 auto 40px auto;
-              text-align: center;
-            "
-          >
-            Constructive Human Intelligence — the framework behind 500+ leadership transformations across 10+ countries.
-          </p>
+          <div class="hero-sub" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:40px;">
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:30px;padding:9px 20px;">
+              <span style="width:5px;height:5px;border-radius:50%;background:#C2703E;display:inline-block;flex-shrink:0;"></span>
+              <span style="font-size:12px;color:#AAAAAA;font-weight:500;letter-spacing:0.03em;">Constructive Human Intelligence</span>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:30px;padding:9px 20px;">
+              <span style="width:5px;height:5px;border-radius:50%;background:#C2703E;display:inline-block;flex-shrink:0;"></span>
+              <span style="font-size:12px;color:#AAAAAA;font-weight:500;letter-spacing:0.03em;">500+ Leaders Transformed</span>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:30px;padding:9px 20px;">
+              <span style="width:5px;height:5px;border-radius:50%;background:#C2703E;display:inline-block;flex-shrink:0;"></span>
+              <span style="font-size:12px;color:#AAAAAA;font-weight:500;letter-spacing:0.03em;">10+ Countries</span>
+            </div>
+          </div>
 
           <!-- CTAs -->
           <div class="hero-cta flex flex-col sm:flex-row gap-4 mb-12" style="justify-content:center;">
@@ -1235,437 +1248,8 @@
       </div>
     </section>
 
-    <!-- ═══ FOR INDIVIDUALS & ORGANIZATIONS ═══ -->
-    <section id="who-we-serve" style="background:#FBF6F1;padding:96px 0;position:relative;overflow:hidden;">
-      <div style="position:absolute;inset:0;opacity:0.018;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22/></filter><rect width=%22300%22 height=%22300%22 filter=%22url(%23n)%22 opacity=%221%22/></svg>');pointer-events:none;"></div>
 
-      <div class="max-w-5xl mx-auto px-6 lg:px-8" style="position:relative;z-index:1;">
-
-        <!-- Header -->
-        <div class="text-center reveal d1" style="margin-bottom:48px;">
-          <p style="font-size:11px;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;color:#C2703E;margin-bottom:14px;">Who We Work With</p>
-          <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;color:#2B2420;line-height:1.08;letter-spacing:-0.03em;margin-bottom:16px;">Two Tracks. One Transformation.</h2>
-          <p style="color:#6b5e58;font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;">Whether you're a leader seeking personal transformation or an organisation building a high-performance culture — our framework delivers measurable results from Day 1.</p>
-        </div>
-
-        <!-- Tab Switcher -->
-        <div class="text-center reveal d2" style="margin-bottom:52px;">
-          <div style="display:inline-flex;border:1.5px solid rgba(194,112,62,0.35);border-radius:50px;padding:4px;background:#fff;">
-            <button id="esc-tab-btn-1" onclick="escTab(1)"
-              style="font-size:13px;font-weight:600;letter-spacing:0.04em;padding:10px 28px;border-radius:40px;border:none;cursor:pointer;transition:background 0.3s ease,color 0.3s ease;background:#C2703E;color:#fff;">
-              For Individual Leaders
-            </button>
-            <button id="esc-tab-btn-2" onclick="escTab(2)"
-              style="font-size:13px;font-weight:600;letter-spacing:0.04em;padding:10px 28px;border-radius:40px;border:none;cursor:pointer;transition:background 0.3s ease,color 0.3s ease;background:transparent;color:#888;">
-              For Organizations
-            </button>
-          </div>
-        </div>
-
-        <!-- TAB 1: Individual Leaders -->
-        <div id="esc-panel-1">
-          <p class="text-center reveal d2" style="color:#6b5e58;font-size:1rem;line-height:1.8;max-width:680px;margin:0 auto 28px;">
-            You built everything you have with your intelligence. But that same intelligence won't let you rest, won't let you be present with your family, and won't let you enjoy what you've built. This is where that war ends — permanently.<br><br>
-            <span style="color:#C2703E;font-weight:600;">97% experience a measurable shift in their cognitive state from the first session.</span>
-          </p>
-          <!-- Stat Cards Row -->
-          <div class="grid md:grid-cols-3 gap-6 reveal d3" style="max-width:680px;margin:0 auto 52px;">
-            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
-              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">90%</p>
-              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0;">Report their mind finally rests</p>
-            </div>
-            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
-              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">500+</p>
-              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0;">Leaders who stopped surviving and started living</p>
-            </div>
-            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
-              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">50%</p>
-              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0;">Calmer under pressure — within one month</p>
-            </div>
-          </div>
-          <div class="grid md:grid-cols-3 gap-8 reveal d4" style="margin-bottom:52px;">
-            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
-              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
-              </div>
-              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Mastery Over Mind</h4>
-              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;font-style:italic;">When was the last time you didn't overthink a decision?</p>
-            </div>
-            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
-              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              </div>
-              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Zero Mind States</h4>
-              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;font-style:italic;">When was the last time you felt truly rested — not just slept, but rested? When was the last time your mind stopped talking?</p>
-            </div>
-            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
-              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              </div>
-              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Superhuman Flow</h4>
-              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;font-style:italic;">When was the last time work felt effortless? When was the last time life felt truly joyful — and you felt truly alive?</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- TAB 2: Organizations -->
-        <div id="esc-panel-2" style="display:none;">
-          <p class="text-center reveal d2" style="color:#6b5e58;font-size:1rem;line-height:1.8;max-width:680px;margin:0 auto 28px;">
-            Your leadership team is already losing millions to cognitive overhead — stress-looping, reactive decisions, and mental friction that compounds at every level of the organisation. This engagement diagnoses exactly where the loss is happening and eliminates it. Measurably. From the first session.<br><br>
-            <span style="color:#C2703E;font-weight:600;">The average enterprise loses $1.2M annually to leadership cognitive overhead — this engagement eliminates it.</span>
-          </p>
-          <!-- Stat Cards Row -->
-          <div class="grid md:grid-cols-3 gap-6 reveal d3" style="max-width:680px;margin:0 auto 52px;">
-            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
-              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">23%</p>
-              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0 0 4px;">Higher Profitability</p>
-              <p style="font-size:11px;color:#7A6B5D;margin:0;">McKinsey & Company</p>
-            </div>
-            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
-              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">57%</p>
-              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0 0 4px;">Reduction in Attrition</p>
-              <p style="font-size:11px;color:#7A6B5D;margin:0;">DDI World</p>
-            </div>
-            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
-              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">85%</p>
-              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0 0 4px;">More Engaged Teams</p>
-              <p style="font-size:11px;color:#7A6B5D;margin:0;">Gallup</p>
-            </div>
-          </div>
-          <div class="grid md:grid-cols-3 gap-8 reveal d4" style="margin-bottom:52px;">
-            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
-              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Team-Wide Cognitive Reset</h4>
-              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;">Diagnose and dissolve the destructive patterns creating invisible bottlenecks across every level of your leadership.</p>
-            </div>
-            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
-              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-              </div>
-              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Precision Under Pressure</h4>
-              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;">Equip teams with repeatable protocols for calm, clear decisions regardless of market conditions or external pressure.</p>
-            </div>
-            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
-              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-              </div>
-              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Organisational Flow</h4>
-              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;">Shift your collective operating state from reactive management to proactive leadership — performance that compounds systemically.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Shared CTA -->
-        <div class="text-center reveal d4">
-          <a href="#contact"
-            style="display:inline-flex;flex-direction:column;align-items:center;gap:3px;background:#C2703E;color:#fff;font-size:14px;font-weight:600;padding:15px 36px;border-radius:12px;text-decoration:none;letter-spacing:0.04em;box-shadow:0 8px 28px rgba(194,112,62,0.3);transition:transform 0.2s ease,box-shadow 0.2s ease;"
-            onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 36px rgba(194,112,62,0.4)'"
-            onmouseout="this.style.transform='';this.style.boxShadow='0 8px 28px rgba(194,112,62,0.3)'">
-            <span>Apply Now — Limited Spots Available</span>
-            <span style="font-size:10px;font-weight:400;opacity:0.8;letter-spacing:0.06em;">Applications reviewed individually</span>
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <script>
-      function escTab(n) {
-        document.getElementById('esc-panel-1').style.display = n === 1 ? 'block' : 'none';
-        document.getElementById('esc-panel-2').style.display = n === 2 ? 'block' : 'none';
-        var b1 = document.getElementById('esc-tab-btn-1');
-        var b2 = document.getElementById('esc-tab-btn-2');
-        if (n === 1) {
-          b1.style.background = '#C2703E'; b1.style.color = '#fff';
-          b2.style.background = 'transparent'; b2.style.color = '#888';
-        } else {
-          b2.style.background = '#C2703E'; b2.style.color = '#fff';
-          b1.style.background = 'transparent'; b1.style.color = '#888';
-        }
-      }
-    </script>
-
-    <!-- ═══ WHAT TO EXPECT ═══ -->
-    <section id="what-to-expect" style="background:#08091a;padding:96px 0;position:relative;overflow:hidden;">
-      <canvas id="wte-canvas" style="position:absolute;inset:0;pointer-events:none;z-index:0;width:100%;height:100%;"></canvas>
-      <div id="wte-bg" style="position:absolute;inset:0;background:radial-gradient(ellipse at 35% 50%,rgba(140,30,30,0.08) 0%,transparent 60%);transition:background 1.6s ease;pointer-events:none;z-index:0;"></div>
-
-      <div class="max-w-6xl mx-auto px-6 lg:px-8" style="position:relative;z-index:1;">
-
-        <!-- Header -->
-        <div class="text-center reveal d1" style="margin-bottom:64px;">
-          <p style="font-size:11px;text-transform:uppercase;letter-spacing:0.12em;font-weight:600;color:#C2703E;margin-bottom:16px;">What To Expect</p>
-          <h2 class="font-display font-bold text-white" style="font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;letter-spacing:-0.03em;margin-bottom:16px;">Where You Are. Where You'll Operate From.</h2>
-          <p style="color:#4a4a5a;font-size:1rem;line-height:1.7;max-width:540px;margin:0 auto;">Most leaders are performing at a fraction of their actual intelligence. The program changes that — permanently.</p>
-
-          <!-- Symptom bullets -->
-          <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px;max-width:680px;margin-left:auto;margin-right:auto;">
-            <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:30px;padding:9px 18px;">
-              <span style="color:#C2703E;font-size:14px;">—</span>
-              <span style="color:#8888a0;font-size:13px;">The mind that won't switch off at 11pm.</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:30px;padding:9px 18px;">
-              <span style="color:#C2703E;font-size:14px;">—</span>
-              <span style="color:#8888a0;font-size:13px;">Stress-looping before every high-stakes meeting.</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:30px;padding:9px 18px;">
-              <span style="color:#C2703E;font-size:14px;">—</span>
-              <span style="color:#8888a0;font-size:13px;">Performing well but feeling nothing.</span>
-            </div>
-            <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:30px;padding:9px 18px;">
-              <span style="color:#C2703E;font-size:14px;">—</span>
-              <span style="color:#8888a0;font-size:13px;">Doubting yourself 5 minutes before a presentation you've done 100 times.</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Brain Scan + Pills -->
-        <div class="wte-grid reveal d2" style="display:grid;grid-template-columns:55% 45%;gap:40px;align-items:start;max-width:1100px;margin:0 auto;">
-
-          <!-- Left: Brain scan (top-down view) -->
-          <div style="display:flex;flex-direction:column;align-items:center;">
-            <div style="position:relative;width:320px;max-width:100%;">
-              <div id="wte-toast">⚡ Peak State Unlocked</div>
-            <svg id="brain-svg" viewBox="0 0 400 400" width="320" height="320" onclick="wteSwitch()" style="display:block;max-width:100%;height:auto;cursor:pointer;" title="Click to toggle state">
-              <defs>
-                <radialGradient id="bgPlate" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="#0f0d1e"/>
-                  <stop offset="100%" stop-color="#08091a"/>
-                </radialGradient>
-                <radialGradient id="brainFillDefault" cx="50%" cy="42%" r="58%">
-                  <stop offset="0%" stop-color="#221a38"/>
-                  <stop offset="65%" stop-color="#141028"/>
-                  <stop offset="100%" stop-color="#0d0b1c"/>
-                </radialGradient>
-                <radialGradient id="brainFillPeak" cx="50%" cy="42%" r="58%">
-                  <stop offset="0%" stop-color="#4a1f06"/>
-                  <stop offset="55%" stop-color="#2e1204"/>
-                  <stop offset="100%" stop-color="#190a02"/>
-                </radialGradient>
-                <filter id="brainGlowFilter" x="-30%" y="-30%" width="160%" height="160%">
-                  <feGaussianBlur stdDeviation="12" result="blur"/>
-                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                </filter>
-                <filter id="scanGlowF" x="-10%" y="-60%" width="120%" height="220%">
-                  <feGaussianBlur stdDeviation="3"/>
-                </filter>
-                <linearGradient id="beamGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%"   stop-color="#C2703E" stop-opacity="0"/>
-                  <stop offset="42%"  stop-color="#C2703E" stop-opacity="0.55"/>
-                  <stop offset="58%"  stop-color="#C2703E" stop-opacity="0.55"/>
-                  <stop offset="100%" stop-color="#C2703E" stop-opacity="0"/>
-                </linearGradient>
-                <clipPath id="brainClip">
-                  <path d="M200,46 C211,43 224,43 233,48 C241,53 246,64 243,74
-                    C250,64 262,62 269,72 C276,82 272,97 263,105
-                    C272,99 283,99 289,111 C295,123 290,140 281,148
-                    C290,143 301,144 307,158 C313,172 307,191 297,198
-                    C305,195 314,199 317,214 C320,229 312,246 301,252
-                    C309,251 315,260 314,275 C313,290 302,302 289,303
-                    C293,303 297,312 291,323 C285,334 269,338 255,333
-                    C249,337 243,343 231,345 C219,347 208,342 203,336
-                    C202,338 200,340 200,340
-                    C200,340 198,338 197,336 C192,342 181,347 169,345
-                    C157,343 151,337 145,333 C131,338 115,334 109,323
-                    C103,312 107,303 111,303 C98,302 87,290 86,275
-                    C85,260 91,251 99,252 C88,246 80,229 83,214
-                    C86,199 95,195 103,198 C93,191 87,172 93,158
-                    C99,144 110,143 119,148 C110,140 105,123 111,111
-                    C117,99 128,99 137,105 C128,97 124,82 131,72
-                    C138,62 150,64 157,74 C154,64 159,53 167,48
-                    C176,43 189,43 200,46 Z"/>
-                </clipPath>
-              </defs>
-
-              <!-- Plate background -->
-              <rect width="400" height="400" fill="url(#bgPlate)"/>
-              <!-- Outer scan ring -->
-              <ellipse cx="200" cy="196" rx="185" ry="185" fill="none" stroke="rgba(194,112,62,0.06)" stroke-width="1"/>
-
-              <!-- ── BRAIN BODY ── -->
-              <!-- Fill -->
-              <path id="brain-fill-path"
-                d="M200,46 C211,43 224,43 233,48 C241,53 246,64 243,74
-                   C250,64 262,62 269,72 C276,82 272,97 263,105
-                   C272,99 283,99 289,111 C295,123 290,140 281,148
-                   C290,143 301,144 307,158 C313,172 307,191 297,198
-                   C305,195 314,199 317,214 C320,229 312,246 301,252
-                   C309,251 315,260 314,275 C313,290 302,302 289,303
-                   C293,303 297,312 291,323 C285,334 269,338 255,333
-                   C249,337 243,343 231,345 C219,347 208,342 203,336
-                   C202,338 200,340 200,340
-                   C200,340 198,338 197,336 C192,342 181,347 169,345
-                   C157,343 151,337 145,333 C131,338 115,334 109,323
-                   C103,312 107,303 111,303 C98,302 87,290 86,275
-                   C85,260 91,251 99,252 C88,246 80,229 83,214
-                   C86,199 95,195 103,198 C93,191 87,172 93,158
-                   C99,144 110,143 119,148 C110,140 105,123 111,111
-                   C117,99 128,99 137,105 C128,97 124,82 131,72
-                   C138,62 150,64 157,74 C154,64 159,53 167,48
-                   C176,43 189,43 200,46 Z"
-                fill="url(#brainFillDefault)"/>
-
-              <!-- Peak glow overlay -->
-              <path id="brain-fill-overlay"
-                d="M200,46 C211,43 224,43 233,48 C241,53 246,64 243,74
-                   C250,64 262,62 269,72 C276,82 272,97 263,105
-                   C272,99 283,99 289,111 C295,123 290,140 281,148
-                   C290,143 301,144 307,158 C313,172 307,191 297,198
-                   C305,195 314,199 317,214 C320,229 312,246 301,252
-                   C309,251 315,260 314,275 C313,290 302,302 289,303
-                   C293,303 297,312 291,323 C285,334 269,338 255,333
-                   C249,337 243,343 231,345 C219,347 208,342 203,336
-                   C202,338 200,340 200,340
-                   C200,340 198,338 197,336 C192,342 181,347 169,345
-                   C157,343 151,337 145,333 C131,338 115,334 109,323
-                   C103,312 107,303 111,303 C98,302 87,290 86,275
-                   C85,260 91,251 99,252 C88,246 80,229 83,214
-                   C86,199 95,195 103,198 C93,191 87,172 93,158
-                   C99,144 110,143 119,148 C110,140 105,123 111,111
-                   C117,99 128,99 137,105 C128,97 124,82 131,72
-                   C138,62 150,64 157,74 C154,64 159,53 167,48
-                   C176,43 189,43 200,46 Z"
-                fill="rgba(194,112,62,0)" filter="url(#brainGlowFilter)"/>
-
-              <!-- Brain outline (bumpy outer edge) -->
-              <path class="brain-sulcus" id="brain-outline-path"
-                d="M200,46 C211,43 224,43 233,48 C241,53 246,64 243,74
-                   C250,64 262,62 269,72 C276,82 272,97 263,105
-                   C272,99 283,99 289,111 C295,123 290,140 281,148
-                   C290,143 301,144 307,158 C313,172 307,191 297,198
-                   C305,195 314,199 317,214 C320,229 312,246 301,252
-                   C309,251 315,260 314,275 C313,290 302,302 289,303
-                   C293,303 297,312 291,323 C285,334 269,338 255,333
-                   C249,337 243,343 231,345 C219,347 208,342 203,336
-                   C202,338 200,340 200,340
-                   C200,340 198,338 197,336 C192,342 181,347 169,345
-                   C157,343 151,337 145,333 C131,338 115,334 109,323
-                   C103,312 107,303 111,303 C98,302 87,290 86,275
-                   C85,260 91,251 99,252 C88,246 80,229 83,214
-                   C86,199 95,195 103,198 C93,191 87,172 93,158
-                   C99,144 110,143 119,148 C110,140 105,123 111,111
-                   C117,99 128,99 137,105 C128,97 124,82 131,72
-                   C138,62 150,64 157,74 C154,64 159,53 167,48
-                   C176,43 189,43 200,46 Z"
-                fill="none" stroke="rgba(160,140,220,0.45)" stroke-width="2"/>
-
-              <!-- Central fissure -->
-              <path class="brain-sulcus" d="M200,48 C200,120 200,220 200,338" fill="none" stroke="rgba(120,100,185,0.65)" stroke-width="2.5" stroke-linecap="round"/>
-
-              <!-- ── RIGHT HEMISPHERE SULCI (branching tree style) ── -->
-              <!-- Sulcus R1: upper frontal -->
-              <path class="brain-sulcus" d="M243,74 C238,84 234,96 236,108 C237,116 241,122 246,127" fill="none" stroke="rgba(150,130,205,0.38)" stroke-width="1.7" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M236,108 C230,114 224,122 222,132 C220,141 223,150 228,156" fill="none" stroke="rgba(150,130,205,0.30)" stroke-width="1.4" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M236,108 C240,116 244,126 242,136 C240,144 235,150 230,153" fill="none" stroke="rgba(150,130,205,0.28)" stroke-width="1.3" stroke-linecap="round"/>
-
-              <!-- Sulcus R2: central (main) -->
-              <path class="brain-sulcus" d="M281,148 C270,155 258,160 246,162 C236,164 227,162 220,157" fill="none" stroke="rgba(152,132,208,0.42)" stroke-width="1.8" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M258,160 C255,170 257,182 262,190 C265,196 270,200 275,203" fill="none" stroke="rgba(150,130,205,0.32)" stroke-width="1.4" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M246,162 C244,174 247,188 254,197 C257,203 262,207 267,209" fill="none" stroke="rgba(150,130,205,0.30)" stroke-width="1.3" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M246,162 C240,170 236,183 238,195 C239,203 243,210 248,215" fill="none" stroke="rgba(148,128,203,0.28)" stroke-width="1.2" stroke-linecap="round"/>
-
-              <!-- Sulcus R3: lateral (Sylvian) -->
-              <path class="brain-sulcus" d="M297,198 C282,204 266,207 252,207 C242,207 233,204 226,199" fill="none" stroke="rgba(152,132,208,0.38)" stroke-width="1.7" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M266,207 C263,219 266,232 272,241 C275,247 280,251 285,254" fill="none" stroke="rgba(150,130,205,0.30)" stroke-width="1.4" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M252,207 C249,219 252,233 258,243 C261,250 266,254 271,257" fill="none" stroke="rgba(148,128,203,0.28)" stroke-width="1.3" stroke-linecap="round"/>
-
-              <!-- Sulcus R4: parietal lower -->
-              <path class="brain-sulcus" d="M301,252 C287,259 271,263 257,263 C246,263 236,260 228,255" fill="none" stroke="rgba(150,130,205,0.36)" stroke-width="1.6" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M271,263 C268,275 271,288 277,297 C280,303 285,307 290,309" fill="none" stroke="rgba(148,128,203,0.28)" stroke-width="1.3" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M257,263 C254,275 257,289 263,299 C266,306 271,310 277,313" fill="none" stroke="rgba(146,126,200,0.26)" stroke-width="1.2" stroke-linecap="round"/>
-
-              <!-- Sulcus R5: occipital -->
-              <path class="brain-sulcus" d="M289,303 C277,310 262,314 248,313 C238,312 229,309 222,303" fill="none" stroke="rgba(148,128,203,0.32)" stroke-width="1.5" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M262,314 C260,324 262,334 268,341" fill="none" stroke="rgba(146,126,200,0.26)" stroke-width="1.2" stroke-linecap="round"/>
-
-              <!-- ── LEFT HEMISPHERE SULCI (mirrored) ── -->
-              <!-- Sulcus L1: upper frontal -->
-              <path class="brain-sulcus" d="M157,74 C162,84 166,96 164,108 C163,116 159,122 154,127" fill="none" stroke="rgba(150,130,205,0.38)" stroke-width="1.7" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M164,108 C170,114 176,122 178,132 C180,141 177,150 172,156" fill="none" stroke="rgba(150,130,205,0.30)" stroke-width="1.4" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M164,108 C160,116 156,126 158,136 C160,144 165,150 170,153" fill="none" stroke="rgba(150,130,205,0.28)" stroke-width="1.3" stroke-linecap="round"/>
-
-              <!-- Sulcus L2: central -->
-              <path class="brain-sulcus" d="M119,148 C130,155 142,160 154,162 C164,164 173,162 180,157" fill="none" stroke="rgba(152,132,208,0.42)" stroke-width="1.8" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M142,160 C145,170 143,182 138,190 C135,196 130,200 125,203" fill="none" stroke="rgba(150,130,205,0.32)" stroke-width="1.4" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M154,162 C156,174 153,188 146,197 C143,203 138,207 133,209" fill="none" stroke="rgba(150,130,205,0.30)" stroke-width="1.3" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M154,162 C160,170 164,183 162,195 C161,203 157,210 152,215" fill="none" stroke="rgba(148,128,203,0.28)" stroke-width="1.2" stroke-linecap="round"/>
-
-              <!-- Sulcus L3: lateral (Sylvian) -->
-              <path class="brain-sulcus" d="M103,198 C118,204 134,207 148,207 C158,207 167,204 174,199" fill="none" stroke="rgba(152,132,208,0.38)" stroke-width="1.7" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M134,207 C137,219 134,232 128,241 C125,247 120,251 115,254" fill="none" stroke="rgba(150,130,205,0.30)" stroke-width="1.4" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M148,207 C151,219 148,233 142,243 C139,250 134,254 129,257" fill="none" stroke="rgba(148,128,203,0.28)" stroke-width="1.3" stroke-linecap="round"/>
-
-              <!-- Sulcus L4: parietal lower -->
-              <path class="brain-sulcus" d="M99,252 C113,259 129,263 143,263 C154,263 164,260 172,255" fill="none" stroke="rgba(150,130,205,0.36)" stroke-width="1.6" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M129,263 C132,275 129,288 123,297 C120,303 115,307 110,309" fill="none" stroke="rgba(148,128,203,0.28)" stroke-width="1.3" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M143,263 C146,275 143,289 137,299 C134,306 129,310 123,313" fill="none" stroke="rgba(146,126,200,0.26)" stroke-width="1.2" stroke-linecap="round"/>
-
-              <!-- Sulcus L5: occipital -->
-              <path class="brain-sulcus" d="M111,303 C123,310 138,314 152,313 C162,312 171,309 178,303" fill="none" stroke="rgba(148,128,203,0.32)" stroke-width="1.5" stroke-linecap="round"/>
-              <path class="brain-sulcus" d="M138,314 C140,324 138,334 132,341" fill="none" stroke="rgba(146,126,200,0.26)" stroke-width="1.2" stroke-linecap="round"/>
-
-              <!-- ── SCAN ANIMATION ── -->
-              <g clip-path="url(#brainClip)">
-                <rect id="brain-scan-beam" x="38" y="-22" width="324" height="34" fill="url(#beamGrad)" opacity="0.85"/>
-                <circle class="brain-pulse-ring" cx="200" cy="196" r="28" fill="none" stroke="rgba(194,112,62,0.5)" stroke-width="1.4"/>
-                <circle class="brain-pulse-ring" cx="200" cy="196" r="28" fill="none" stroke="rgba(194,112,62,0.38)" stroke-width="1.1"/>
-                <circle class="brain-pulse-ring" cx="200" cy="196" r="28" fill="none" stroke="rgba(194,112,62,0.26)" stroke-width="0.9"/>
-              </g>
-
-              <!-- ── HUD ── -->
-              <path d="M16,16 L16,40 M16,16 L40,16" stroke="rgba(194,112,62,0.4)" stroke-width="1.2" fill="none"/>
-              <path d="M384,16 L384,40 M384,16 L360,16" stroke="rgba(194,112,62,0.4)" stroke-width="1.2" fill="none"/>
-              <path d="M16,384 L16,360 M16,384 L40,384" stroke="rgba(194,112,62,0.4)" stroke-width="1.2" fill="none"/>
-              <path d="M384,384 L384,360 M384,384 L360,384" stroke="rgba(194,112,62,0.4)" stroke-width="1.2" fill="none"/>
-              <circle cx="30" cy="12" r="4" fill="#C2703E" opacity="0.9"/>
-              <text x="38" y="16" font-size="8" fill="rgba(194,112,62,0.65)" font-family="monospace" letter-spacing="1.5">NEURAL SCAN · REC</text>
-              <text x="268" y="16" font-size="8" fill="rgba(194,112,62,0.45)" font-family="monospace" letter-spacing="1">ID:MCA-0047</text>
-              <text x="20" y="396" font-size="8" fill="rgba(194,112,62,0.3)" font-family="monospace" letter-spacing="1">SESSION-01</text>
-              <text x="286" y="396" font-size="8" fill="rgba(194,112,62,0.3)" font-family="monospace">MINDFUL.IO</text>
-            </svg>
-            </div><!-- /brain wrapper -->
-            <!-- Caption below scan -->
-            <div id="brain-click-hint" onclick="wteSwitch()">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              Click to unlock peak state
-            </div>
-            <p id="wte-scan-caption" style="margin-top:20px;font-size:13px;color:#4a4a60;line-height:1.75;text-align:center;font-style:italic;transition:opacity 0.5s ease;padding:0 8px;">"This is destructive intelligence. Not a character flaw. Not inevitable. A pattern — and patterns can be dissolved."</p>
-          </div>
-
-          <!-- Right: Pills -->
-          <div>
-            <!-- Toggle -->
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;flex-wrap:wrap;">
-              <div onclick="wteSwitch()" style="display:inline-flex;border:1px solid #1e1e30;border-radius:40px;overflow:hidden;font-size:10px;font-weight:700;letter-spacing:0.12em;cursor:pointer;user-select:none;">
-                <div id="wte-btn-before" style="padding:9px 22px;background:#12121e;color:#aa4040;transition:all 0.5s ease;">WHERE YOU ARE</div>
-                <div id="wte-btn-after"  style="padding:9px 22px;background:transparent;color:#2e2e3e;transition:all 0.5s ease;">WHERE YOU'LL OPERATE FROM ✦</div>
-              </div>
-            </div>
-            <!-- 2-column pill grid -->
-            <div id="wte-pill-list" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;"></div>
-          </div>
-
-        </div>
-
-        <!-- Proof point -->
-        <div style="text-align:center;margin-top:40px;padding:28px 32px;border:1px solid rgba(194,112,62,0.15);border-radius:16px;max-width:640px;margin-left:auto;margin-right:auto;background:rgba(194,112,62,0.03);">
-          <p style="color:#5a5a6a;font-size:0.95rem;line-height:1.8;margin:0;">We don't ask you to take this on faith.<br>
-          <span style="color:#c0bdd0;">In your first session, you experience this state yourself — before committing to anything.</span></p>
-        </div>
-
-        <!-- CTA -->
-        <div style="text-align:center;margin-top:40px;">
-          <a href="#contact" class="btn-primary px-8 py-4 rounded-xl text-sm font-semibold" style="display:inline-block;">Apply for Your Demo Session →</a>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ═══ STATS BAR ═══ -->
+        <!-- ═══ STATS BAR ═══ -->
     <div
       id="stats-bar"
       style="background: #C2703E; position: relative; overflow: hidden"
@@ -1754,7 +1338,7 @@
       </div>
     </div>
 
-    <!-- ═══ FEATURED IN ═══ -->
+        <!-- ═══ FEATURED IN ═══ -->
     <section
       style="
         background: #FFFFFF;
@@ -1846,6 +1430,22 @@
           <span style="color:#D0C8C2;flex-shrink:0;">·</span>
           <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Echo Republic</span></span>
           <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Today News Standard</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">The Neo India News</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Public Bytes</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Mint News 24</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Today News Standard</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">The Neo India News</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Public Bytes</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Mint News 24</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
           <!-- Set 2 (duplicate for seamless loop) -->
           <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><svg height="14" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Google News</span></span>
           <span style="color:#D0C8C2;flex-shrink:0;">·</span>
@@ -1881,10 +1481,481 @@
           <span style="color:#D0C8C2;flex-shrink:0;">·</span>
           <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Echo Republic</span></span>
           <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Today News Standard</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">The Neo India News</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Public Bytes</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;white-space:nowrap;"><span style="color:#7A6B5D;font-size:13px;font-weight:600;letter-spacing:0.04em;">Mint News 24</span></span>
+          <span style="color:#D0C8C2;flex-shrink:0;">·</span>
           <span style="color:#D0C8C2;flex-shrink:0;">·</span>
         </div>
       </div>
     </section>
+    <!-- ═══ ONE ROOT ═══ -->
+    <section id="one-root" style="background:#1e1915;padding:96px 0;position:relative;overflow:hidden;">
+      <!-- Radial glow -->
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(194,112,62,0.07) 0%,transparent 65%);border-radius:50%;pointer-events:none;"></div>
+      <!-- Grain texture -->
+      <div style="position:absolute;inset:0;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.75%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22300%22 height=%22300%22 filter=%22url(%23n)%22 opacity=%220.03%22/%3E%3C/svg%3E&quot;);pointer-events:none;opacity:0.5;"></div>
+
+      <div class="max-w-5xl mx-auto px-6 lg:px-8 relative" style="z-index:1;">
+
+        <!-- Opening narrative -->
+        <div class="text-center reveal d1" style="margin-bottom:56px;">
+          <p style="font-size:11px;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;color:#C2703E;margin-bottom:16px;">Why Nothing Else Has Worked</p>
+          <h2 class="font-display font-bold" style="color:#FBF6F1;font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;letter-spacing:-0.03em;margin-bottom:28px;">You've Been Solving<br><em style="color:#C2703E;font-style:italic;">The Wrong Problem.</em></h2>
+          <p style="color:#9A8B7E;font-size:1.05rem;line-height:1.85;max-width:560px;margin:0 auto;">Every leader who walks in has tried everything. Therapy. Systems. Coaches. It helps — then returns. Because every solution was treating symptoms. Not the root.</p>
+        </div>
+
+        <!-- Hub: 3-column layout -->
+        <div class="reveal d2 one-root-hub-grid" style="display:grid;grid-template-columns:1fr auto 1fr;gap:36px;align-items:center;margin-bottom:40px;">
+          <div style="text-align:right;">
+            <p class="font-display" style="font-size:clamp(1rem,2vw,1.25rem);color:#D0C8C2;line-height:1.65;font-style:italic;">Your health, performance, relationships, and finances don't have separate causes.</p>
+          </div>
+          <div style="text-align:center;flex-shrink:0;">
+            <div style="display:inline-block;background:rgba(194,112,62,0.07);border:2px solid rgba(194,112,62,0.45);border-radius:20px;padding:24px 40px;">
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;color:#C2703E;margin-bottom:6px;">The Baseline</p>
+              <div class="font-display" style="font-size:clamp(3.8rem,9vw,6.5rem);font-weight:700;color:#FBF6F1;line-height:1;letter-spacing:-0.04em;text-shadow:0 0 60px rgba(194,112,62,0.25);">0.0</div>
+              <p style="font-size:11px;color:#D4895C;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-top:8px;">The Root</p>
+            </div>
+          </div>
+          <div>
+            <p class="font-display" style="font-size:clamp(1rem,2vw,1.25rem);color:#D0C8C2;line-height:1.65;font-style:italic;">They all resolve from the same source — your intelligence baseline.</p>
+          </div>
+        </div>
+
+        <!-- Metacognition callout -->
+        <div class="reveal d2" style="background:rgba(194,112,62,0.07);border:1px solid rgba(194,112,62,0.2);border-radius:16px;padding:26px 36px;margin-bottom:40px;text-align:center;max-width:700px;margin-left:auto;margin-right:auto;">
+          <p style="font-size:10px;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;color:#C2703E;margin-bottom:12px;">The Mechanism</p>
+          <p style="font-size:1rem;line-height:1.8;color:#C0B4AA;"><strong style="color:#FBF6F1;font-weight:600;">Metacognition</strong> — the ability to govern your own thinking from above. When you can see the pattern creating the problem, you stop being run by it. Everything downstream resolves.</p>
+        </div>
+
+        <!-- Branch visual connector -->
+        <div style="text-align:center;margin-bottom:16px;">
+          <div style="width:2px;height:28px;background:linear-gradient(to bottom,rgba(194,112,62,0.45),rgba(194,112,62,0.08));margin:0 auto;"></div>
+          <div style="position:relative;margin:0 auto;max-width:680px;">
+            <div style="height:1px;background:rgba(194,112,62,0.18);width:100%;"></div>
+            <div style="position:absolute;top:0;left:10%;width:1px;height:12px;background:rgba(194,112,62,0.28);"></div>
+            <div style="position:absolute;top:0;left:30%;width:1px;height:12px;background:rgba(194,112,62,0.28);"></div>
+            <div style="position:absolute;top:0;left:50%;width:1px;height:12px;background:rgba(194,112,62,0.28);"></div>
+            <div style="position:absolute;top:0;left:70%;width:1px;height:12px;background:rgba(194,112,62,0.28);"></div>
+            <div style="position:absolute;top:0;left:90%;width:1px;height:12px;background:rgba(194,112,62,0.28);"></div>
+          </div>
+          <div style="height:12px;"></div>
+        </div>
+
+        <!-- Domain cards -->
+        <div class="reveal d3 one-root-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:56px;">
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:22px 14px;text-align:center;transition:border-color 0.25s,background 0.25s;" onmouseover="this.style.borderColor='rgba(194,112,62,0.4)';this.style.background='rgba(194,112,62,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.03)'">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(194,112,62,0.12);border:1px solid rgba(194,112,62,0.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px auto;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FBF6F1;margin-bottom:8px;">Health</p>
+            <p style="font-size:11px;color:#6B5E58;line-height:1.65;">Inflammation, chronic pain, poor sleep — your body absorbing your mind's unresolved friction.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:22px 14px;text-align:center;transition:border-color 0.25s,background 0.25s;" onmouseover="this.style.borderColor='rgba(194,112,62,0.4)';this.style.background='rgba(194,112,62,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.03)'">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(194,112,62,0.12);border:1px solid rgba(194,112,62,0.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px auto;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FBF6F1;margin-bottom:8px;">Performance</p>
+            <p style="font-size:11px;color:#6B5E58;line-height:1.65;">Overthinking, second-guessing, decision fatigue — not weakness. A noisy baseline.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:22px 14px;text-align:center;transition:border-color 0.25s,background 0.25s;" onmouseover="this.style.borderColor='rgba(194,112,62,0.4)';this.style.background='rgba(194,112,62,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.03)'">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(194,112,62,0.12);border:1px solid rgba(194,112,62,0.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px auto;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FBF6F1;margin-bottom:8px;">Relationships</p>
+            <p style="font-size:11px;color:#6B5E58;line-height:1.65;">Reactivity, conflict, distance — what looks like a relationship problem is an intelligence problem.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:22px 14px;text-align:center;transition:border-color 0.25s,background 0.25s;" onmouseover="this.style.borderColor='rgba(194,112,62,0.4)';this.style.background='rgba(194,112,62,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.03)'">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(194,112,62,0.12);border:1px solid rgba(194,112,62,0.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px auto;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            </div>
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FBF6F1;margin-bottom:8px;">Finances</p>
+            <p style="font-size:11px;color:#6B5E58;line-height:1.65;">Fear-driven decisions, scarcity loops, missed opportunities — patterns in mind, not money.</p>
+          </div>
+          <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:22px 14px;text-align:center;transition:border-color 0.25s,background 0.25s;" onmouseover="this.style.borderColor='rgba(194,112,62,0.4)';this.style.background='rgba(194,112,62,0.06)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.background='rgba(255,255,255,0.03)'">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(194,112,62,0.12);border:1px solid rgba(194,112,62,0.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px auto;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 8 12 12 14 14"></polyline></svg>
+            </div>
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#FBF6F1;margin-bottom:8px;">Confidence</p>
+            <p style="font-size:11px;color:#6B5E58;line-height:1.65;">Impostor syndrome, people-pleasing, self-doubt — not identity. States you haven't exited yet.</p>
+          </div>
+        </div>
+
+        <!-- Closing -->
+        <div class="text-center reveal d4">
+          <p class="font-display" style="font-size:clamp(1.35rem,3vw,1.9rem);color:#FBF6F1;font-weight:600;line-height:1.45;font-style:italic;max-width:560px;margin:0 auto 20px auto;">"Fix the root.<br>Everything downstream resolves."</p>
+          <div style="width:48px;height:2px;background:#C2703E;border-radius:2px;margin:0 auto;"></div>
+        </div>
+
+      </div>
+
+      <style>
+        @media (max-width: 900px) {
+          .one-root-grid { grid-template-columns: repeat(3, 1fr) !important; }
+          .one-root-hub-grid { grid-template-columns: 1fr !important; text-align: center !important; }
+          .one-root-hub-grid > div { text-align: center !important; }
+        }
+        @media (max-width: 600px) {
+          .one-root-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (max-width: 380px) {
+          .one-root-grid { grid-template-columns: 1fr !important; }
+        }
+      </style>
+    </section>
+
+    <!-- ═══ FOR INDIVIDUALS & ORGANIZATIONS ═══ -->
+    <section id="who-we-serve" style="background:#FBF6F1;padding:96px 0;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;opacity:0.018;background-image:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22/></filter><rect width=%22300%22 height=%22300%22 filter=%22url(%23n)%22 opacity=%221%22/></svg>');pointer-events:none;"></div>
+
+      <div class="max-w-5xl mx-auto px-6 lg:px-8" style="position:relative;z-index:1;">
+
+        <!-- Header -->
+        <div class="text-center reveal d1" style="margin-bottom:48px;">
+          <p style="font-size:11px;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;color:#C2703E;margin-bottom:14px;">Who We Work With</p>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;color:#2B2420;line-height:1.08;letter-spacing:-0.03em;margin-bottom:16px;">Two Tracks. One Transformation.</h2>
+          <p style="color:#6b5e58;font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;">Whether you're a leader seeking personal transformation or an organisation building a high-performance culture — our framework delivers measurable results from Day 1.</p>
+        </div>
+
+        <!-- Tab Switcher -->
+        <div class="text-center reveal d2" style="margin-bottom:52px;">
+          <div style="display:inline-flex;border:1.5px solid rgba(194,112,62,0.35);border-radius:50px;padding:4px;background:#fff;">
+            <button id="esc-tab-btn-1" onclick="escTab(1)"
+              style="font-size:13px;font-weight:600;letter-spacing:0.04em;padding:10px 28px;border-radius:40px;border:none;cursor:pointer;transition:background 0.3s ease,color 0.3s ease;background:#C2703E;color:#fff;">
+              For Individual Leaders
+            </button>
+            <button id="esc-tab-btn-2" onclick="escTab(2)"
+              style="font-size:13px;font-weight:600;letter-spacing:0.04em;padding:10px 28px;border-radius:40px;border:none;cursor:pointer;transition:background 0.3s ease,color 0.3s ease;background:transparent;color:#888;">
+              For Organizations
+            </button>
+          </div>
+        </div>
+
+        <!-- TAB 1: Individual Leaders -->
+        <div id="esc-panel-1">
+          <p class="text-center reveal d2" style="color:#6b5e58;font-size:1rem;line-height:1.8;max-width:560px;margin:0 auto 28px;">
+            You built everything you have with your intelligence. But that same intelligence won't let you rest. This is where that war ends — and the body stops paying the price.
+          </p>
+          <!-- Stat Cards Row -->
+          <div class="grid md:grid-cols-3 gap-6 reveal d3" style="max-width:680px;margin:0 auto 52px;">
+            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
+              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">90%</p>
+              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0;">Report their mind finally rests</p>
+            </div>
+            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
+              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">500+</p>
+              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0;">Leaders who stopped surviving and started living</p>
+            </div>
+            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
+              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">50%</p>
+              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0;">Calmer under pressure — within one month</p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8 reveal d4" style="margin-bottom:52px;">
+            <!-- Card 1: Zero Mind State -->
+            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
+              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Zero Mind State</h4>
+              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;font-style:italic;">Complete mental stillness. When you reach it, inflammation drops, sleep deepens, chronic symptoms ease. Optimal health becomes the default.</p>
+            </div>
+            <!-- Card 2: Metacognitive Mastery -->
+            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
+              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+              </div>
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Metacognitive Mastery</h4>
+              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;font-style:italic;">Step outside your own thinking and govern it. Observe the pattern. Choose the response. Set the state. You are no longer run by your mind — you run it.</p>
+            </div>
+            <!-- Card 3: Superhuman States -->
+            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
+              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Superhuman States</h4>
+              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;font-style:italic;">What becomes available once the root is clear. Effortless focus. Peak decisions. Relationships that deepen. Optimal health as a natural outcome — not something you manage.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: Organizations -->
+        <div id="esc-panel-2" style="display:none;">
+          <p class="text-center reveal d2" style="color:#6b5e58;font-size:1rem;line-height:1.8;max-width:560px;margin:0 auto 28px;">
+            Your leadership team is losing capacity to cognitive overhead every day — reactive decisions, chronic burnout, mental friction that compounds at every level. This engagement diagnoses exactly where the loss is and eliminates it. From the first session.
+          </p>
+          <!-- Stat Cards Row -->
+          <div class="grid md:grid-cols-3 gap-6 reveal d3" style="max-width:680px;margin:0 auto 52px;">
+            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
+              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">23%</p>
+              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0 0 4px;">Higher Profitability</p>
+              <p style="font-size:11px;color:#7A6B5D;margin:0;">McKinsey & Company</p>
+            </div>
+            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
+              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">57%</p>
+              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0 0 4px;">Reduction in Attrition</p>
+              <p style="font-size:11px;color:#7A6B5D;margin:0;">DDI World</p>
+            </div>
+            <div style="text-align:center;padding:28px 20px;background:#fff;border-radius:16px;border:1px solid #E4DFD9;box-shadow:0 2px 16px rgba(194,112,62,0.06);">
+              <p style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:#C2703E;line-height:1;margin:0 0 8px;">85%</p>
+              <p style="font-size:13px;font-weight:600;color:#2B2420;margin:0 0 4px;">More Engaged Teams</p>
+              <p style="font-size:11px;color:#7A6B5D;margin:0;">Gallup</p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8 reveal d4" style="margin-bottom:52px;">
+            <!-- Card 1: Zero Mind State (team) -->
+            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
+              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Zero Mind State</h4>
+              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;">No reactive noise. No hidden tension absorbing capacity. Burnout drops. Sick days drop. Collective intelligence rises.</p>
+            </div>
+            <!-- Card 2: Metacognitive Mastery (team) -->
+            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
+              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+              </div>
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Metacognitive Mastery</h4>
+              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;">Leaders who govern their own thinking govern their teams differently. Metacognitive command at the top reshapes the culture of the entire organisation.</p>
+            </div>
+            <!-- Card 3: Superhuman States (team) -->
+            <div style="text-align:center;padding:36px 24px;background:#fff;border-radius:20px;border:1px solid rgba(194,112,62,0.12);box-shadow:0 4px 24px rgba(194,112,62,0.08);">
+              <div style="width:56px;height:56px;margin:0 auto 20px;background:rgba(194,112,62,0.08);border-radius:16px;display:flex;align-items:center;justify-content:center;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C2703E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:#2B2420;margin-bottom:14px;letter-spacing:-0.01em;">Superhuman States</h4>
+              <p style="color:#6b5e58;font-size:13.5px;line-height:1.8;">Faster decisions, deeper collaboration, lower attrition. Performance that compounds — because the root is fixed.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shared CTA -->
+        <div class="text-center reveal d4">
+          <a href="#contact"
+            style="display:inline-flex;flex-direction:column;align-items:center;gap:3px;background:#C2703E;color:#fff;font-size:14px;font-weight:600;padding:15px 36px;border-radius:12px;text-decoration:none;letter-spacing:0.04em;box-shadow:0 8px 28px rgba(194,112,62,0.3);transition:transform 0.2s ease,box-shadow 0.2s ease;"
+            onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 36px rgba(194,112,62,0.4)'"
+            onmouseout="this.style.transform='';this.style.boxShadow='0 8px 28px rgba(194,112,62,0.3)'">
+            <span>Apply Now — Limited Spots Available</span>
+            <span style="font-size:10px;font-weight:400;opacity:0.8;letter-spacing:0.06em;">Applications reviewed individually</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <script>
+      function escTab(n) {
+        document.getElementById('esc-panel-1').style.display = n === 1 ? 'block' : 'none';
+        document.getElementById('esc-panel-2').style.display = n === 2 ? 'block' : 'none';
+        var b1 = document.getElementById('esc-tab-btn-1');
+        var b2 = document.getElementById('esc-tab-btn-2');
+        if (n === 1) {
+          b1.style.background = '#C2703E'; b1.style.color = '#fff';
+          b2.style.background = 'transparent'; b2.style.color = '#888';
+        } else {
+          b2.style.background = '#C2703E'; b2.style.color = '#fff';
+          b1.style.background = 'transparent'; b1.style.color = '#888';
+        }
+      }
+    </script>
+
+    <!-- ═══ WHAT TO EXPECT ═══ -->
+    <section id="what-to-expect" style="background:#E9E3DA;padding:0;">
+      <div class="max-w-3xl mx-auto px-6 lg:px-8" style="padding-top:88px;padding-bottom:0;">
+
+        <!-- Header -->
+        <div class="reveal d1" style="margin-bottom:52px;">
+          <p style="font-size:10px;text-transform:uppercase;letter-spacing:0.18em;font-weight:600;color:#9B5C2E;margin-bottom:22px;font-family:monospace;">The Before / After</p>
+          <h2 class="font-display" style="font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.08;font-weight:300;color:#2B2420;margin-bottom:20px;letter-spacing:-0.01em;">
+            Where you are now.<br>
+            Where you'll <em style="color:#C2703E;font-style:italic;">operate from.</em>
+          </h2>
+          <div style="display:inline-flex;align-items:center;border:1px solid rgba(155,92,46,0.28);border-radius:30px;padding:6px 16px;margin-bottom:20px;">
+            <span style="color:#9B5C2E;font-size:9px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;font-family:monospace;">Metacognition — The Highest State of Intelligence</span>
+          </div>
+          <p style="color:#6B5A4E;font-size:1rem;line-height:1.75;max-width:500px;">Most senior leaders are running an operating system that costs them clarity, presence, and sleep. Metacognitive command changes the system — not the symptoms.</p>
+        </div>
+
+        <!-- Symptom list -->
+        <div class="reveal d2" style="margin-bottom:56px;">
+          <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:#A8968A;margin-bottom:16px;font-family:monospace;">If any of this is familiar —</p>
+          <div style="border-top:1px solid rgba(43,36,32,0.15);">
+            <div style="display:flex;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid rgba(43,36,32,0.08);">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;min-width:18px;flex-shrink:0;">01</span>
+              <span class="font-display" style="font-size:1.2rem;color:#2B2420;line-height:1.45;font-weight:400;">The mind that won't switch off at 11pm.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid rgba(43,36,32,0.08);">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;min-width:18px;flex-shrink:0;">02</span>
+              <span class="font-display" style="font-size:1.2rem;color:#2B2420;line-height:1.45;font-weight:400;">Stress-looping before every high-stakes meeting.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid rgba(43,36,32,0.08);">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;min-width:18px;flex-shrink:0;">03</span>
+              <span class="font-display" style="font-size:1.2rem;color:#2B2420;line-height:1.45;font-weight:400;">Performing well, feeling almost nothing.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid rgba(43,36,32,0.08);">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;min-width:18px;flex-shrink:0;">04</span>
+              <span class="font-display" style="font-size:1.2rem;color:#2B2420;line-height:1.45;font-weight:400;">Doubting yourself five minutes before a presentation you've done a hundred times.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid rgba(43,36,32,0.08);">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;min-width:18px;flex-shrink:0;">05</span>
+              <span class="font-display" style="font-size:1.2rem;color:#2B2420;line-height:1.45;font-weight:400;">Chronic tension the body never releases.</span>
+            </div>
+            <div style="display:flex;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid rgba(43,36,32,0.08);">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;min-width:18px;flex-shrink:0;">06</span>
+              <span class="font-display" style="font-size:1.2rem;color:#2B2420;line-height:1.45;font-weight:400;">Inflammation, poor sleep, low energy — no clear cause.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Domain comparison table — full bleed within section, max-width restrained -->
+      <div class="max-w-3xl mx-auto px-6 lg:px-8">
+        <div class="reveal d3">
+          <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.18em;color:#A8968A;margin-bottom:0;font-family:monospace;padding-bottom:14px;border-bottom:1px solid rgba(43,36,32,0.2);">Domain</p>
+
+          <!-- Row template: domain label + 2-col before/after -->
+          <!-- 01 Mind state -->
+          <div style="padding:24px 0;border-bottom:1px solid rgba(43,36,32,0.1);">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px;">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;">01</span>
+              <span class="font-display" style="font-size:1.1rem;color:#2B2420;font-weight:500;">Mind state</span>
+            </div>
+            <div class="wte-domain-cols" style="display:grid;grid-template-columns:1fr 1fr;">
+              <div style="padding:12px 20px 12px 0;border-right:1px solid rgba(43,36,32,0.1);">
+                <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.16em;color:#C2A898;margin-bottom:6px;font-family:monospace;">Where you are</p>
+                <p style="font-size:0.95rem;color:#7A6A60;line-height:1.65;margin:0;">Always on. Background noise even in stillness.</p>
+              </div>
+              <div class="wte-col-after" style="padding:12px 0 12px 20px;border-left:2px solid #C2703E;">
+                <p style="font-size:0.95rem;color:#2B2420;line-height:1.65;margin:0;font-weight:600;">Quiet by default. Activated when needed.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 Decision making -->
+          <div style="padding:24px 0;border-bottom:1px solid rgba(43,36,32,0.1);">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px;">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;">02</span>
+              <span class="font-display" style="font-size:1.1rem;color:#2B2420;font-weight:500;">Decision making</span>
+            </div>
+            <div class="wte-domain-cols" style="display:grid;grid-template-columns:1fr 1fr;">
+              <div style="padding:12px 20px 12px 0;border-right:1px solid rgba(43,36,32,0.1);">
+                <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.16em;color:#C2A898;margin-bottom:6px;font-family:monospace;">Where you are</p>
+                <p style="font-size:0.95rem;color:#7A6A60;line-height:1.65;margin:0;">Looped, second-guessed, slowed by anxiety.</p>
+              </div>
+              <div class="wte-col-after" style="padding:12px 0 12px 20px;border-left:2px solid #C2703E;">
+                <p style="font-size:0.95rem;color:#2B2420;line-height:1.65;margin:0;font-weight:600;">Made once, from clarity. No replay.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03 Under pressure -->
+          <div style="padding:24px 0;border-bottom:1px solid rgba(43,36,32,0.1);">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px;">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;">03</span>
+              <span class="font-display" style="font-size:1.1rem;color:#2B2420;font-weight:500;">Under pressure</span>
+            </div>
+            <div class="wte-domain-cols" style="display:grid;grid-template-columns:1fr 1fr;">
+              <div style="padding:12px 20px 12px 0;border-right:1px solid rgba(43,36,32,0.1);">
+                <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.16em;color:#C2A898;margin-bottom:6px;font-family:monospace;">Where you are</p>
+                <p style="font-size:0.95rem;color:#7A6A60;line-height:1.65;margin:0;">Reactive. Heart-rate ahead of the room.</p>
+              </div>
+              <div class="wte-col-after" style="padding:12px 0 12px 20px;border-left:2px solid #C2703E;">
+                <p style="font-size:0.95rem;color:#2B2420;line-height:1.65;margin:0;font-weight:600;">Centred. Pace of the room set by you.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04 Emotional load -->
+          <div style="padding:24px 0;border-bottom:1px solid rgba(43,36,32,0.1);">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px;">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;">04</span>
+              <span class="font-display" style="font-size:1.1rem;color:#2B2420;font-weight:500;">Emotional load</span>
+            </div>
+            <div class="wte-domain-cols" style="display:grid;grid-template-columns:1fr 1fr;">
+              <div style="padding:12px 20px 12px 0;border-right:1px solid rgba(43,36,32,0.1);">
+                <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.16em;color:#C2A898;margin-bottom:6px;font-family:monospace;">Where you are</p>
+                <p style="font-size:0.95rem;color:#7A6A60;line-height:1.65;margin:0;">Carried home. Spilled into the family.</p>
+              </div>
+              <div class="wte-col-after" style="padding:12px 0 12px 20px;border-left:2px solid #C2703E;">
+                <p style="font-size:0.95rem;color:#2B2420;line-height:1.65;margin:0;font-weight:600;">Closed at the end of the day.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 05 Sleep -->
+          <div style="padding:24px 0;border-bottom:1px solid rgba(43,36,32,0.1);">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px;">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;">05</span>
+              <span class="font-display" style="font-size:1.1rem;color:#2B2420;font-weight:500;">Sleep</span>
+            </div>
+            <div class="wte-domain-cols" style="display:grid;grid-template-columns:1fr 1fr;">
+              <div style="padding:12px 20px 12px 0;border-right:1px solid rgba(43,36,32,0.1);">
+                <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.16em;color:#C2A898;margin-bottom:6px;font-family:monospace;">Where you are</p>
+                <p style="font-size:0.95rem;color:#7A6A60;line-height:1.65;margin:0;">Slept, not rested. Wake at 4am rehearsing.</p>
+              </div>
+              <div class="wte-col-after" style="padding:12px 0 12px 20px;border-left:2px solid #C2703E;">
+                <p style="font-size:0.95rem;color:#2B2420;line-height:1.65;margin:0;font-weight:600;">Deep. Wake without the loop already running.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 06 Confidence -->
+          <div style="padding:24px 0;border-bottom:1px solid rgba(43,36,32,0.1);">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px;">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;">06</span>
+              <span class="font-display" style="font-size:1.1rem;color:#2B2420;font-weight:500;">Confidence</span>
+            </div>
+            <div class="wte-domain-cols" style="display:grid;grid-template-columns:1fr 1fr;">
+              <div style="padding:12px 20px 12px 0;border-right:1px solid rgba(43,36,32,0.1);">
+                <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.16em;color:#C2A898;margin-bottom:6px;font-family:monospace;">Where you are</p>
+                <p style="font-size:0.95rem;color:#7A6A60;line-height:1.65;margin:0;">Earned, then lost again before each meeting.</p>
+              </div>
+              <div class="wte-col-after" style="padding:12px 0 12px 20px;border-left:2px solid #C2703E;">
+                <p style="font-size:0.95rem;color:#2B2420;line-height:1.65;margin:0;font-weight:600;">A baseline, not a performance.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 07 Physical health -->
+          <div style="padding:24px 0;border-bottom:1px solid rgba(43,36,32,0.1);">
+            <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px;">
+              <span style="font-size:10px;color:#C2A898;font-family:monospace;">07</span>
+              <span class="font-display" style="font-size:1.1rem;color:#2B2420;font-weight:500;">Physical health</span>
+            </div>
+            <div class="wte-domain-cols" style="display:grid;grid-template-columns:1fr 1fr;">
+              <div style="padding:12px 20px 12px 0;border-right:1px solid rgba(43,36,32,0.1);">
+                <p style="font-size:9px;text-transform:uppercase;letter-spacing:0.16em;color:#C2A898;margin-bottom:6px;font-family:monospace;">Where you are</p>
+                <p style="font-size:0.95rem;color:#7A6A60;line-height:1.65;margin:0;">Chronic tension. Inflammation with no clear cause. The body absorbing the mind's friction.</p>
+              </div>
+              <div class="wte-col-after" style="padding:12px 0 12px 20px;border-left:2px solid #C2703E;">
+                <p style="font-size:0.95rem;color:#2B2420;line-height:1.65;margin:0;font-weight:600;">Inflammation drops. Sleep deepens. Optimal health as the natural outcome — not something managed.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Dark CTA band -->
+      <div style="margin-top:64px;background:#1e1915;padding:52px 32px;">
+        <div class="max-w-3xl mx-auto">
+          <p style="color:#D4C5B8;font-size:1.05rem;line-height:1.8;margin-bottom:28px;max-width:580px;">
+            <strong style="color:#FBF6F1;">You'll feel the shift in session one.</strong> Not as a metaphor — as a measurable change in resting cognition that you'll notice the moment you stand up.
+          </p>
+          <a href="#contact" style="display:inline-block;background:#C2703E;color:#fff;padding:14px 28px;font-size:12px;font-weight:700;letter-spacing:0.08em;text-decoration:none;text-transform:uppercase;">Apply for a session →</a>
+        </div>
+      </div>
+
+    </section>
+
+
+
 
     <!-- ═══ ABOUT / MISSION ═══ -->
     <section id="about" style="background:#FBF6F1;padding:96px 0;">
@@ -1905,8 +1976,8 @@
 
         <!-- Body copy -->
         <div class="reveal d3">
-          <p style="color:#3D3028;font-size:1.05rem;line-height:1.85;margin-bottom:24px;">Most people today have their own intelligence working against them. Worrying, overthinking, stress-looping — these are not character flaws. They are <strong>destructive intelligence patterns</strong>.</p>
-          <p style="color:#3D3028;font-size:1.05rem;line-height:1.85;margin-bottom:40px;">We train leaders to stop being operated by their minds and start commanding them — and in doing so, to access the deeper intelligence that was always available.</p>
+          <p style="color:#3D3028;font-size:1.05rem;line-height:1.85;margin-bottom:24px;">Most people have their own intelligence working against them. Overthinking, stress-looping, imposter syndrome — not character flaws. <strong>Destructive intelligence patterns.</strong></p>
+          <p style="color:#3D3028;font-size:1.05rem;line-height:1.85;margin-bottom:40px;">We train leaders to govern their minds through <strong>metacognition</strong> — stepping outside your own thinking and commanding it from above. When that command is restored, everything resolves. Performance, health, relationships. Simultaneously.</p>
         </div>
 
         <!-- Intelligence Hierarchy pills -->
@@ -1932,19 +2003,9 @@
           <p style="text-align:center;color:#9A8B7E;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;">The Intelligence Hierarchy — From Friction to Mastery</p>
         </div>
 
-        <!-- Rest & performance -->
-        <div class="reveal d4" style="margin-bottom:32px;">
-          <p style="color:#C2703E;font-size:1.15rem;font-weight:600;line-height:1.5;margin-bottom:16px;">Rest and performance are not opposites.</p>
-          <p style="color:#3D3028;font-size:1.05rem;line-height:1.85;margin-bottom:0;">They are the same state. A rested mind flows. A flowing mind performs.</p>
-        </div>
-
-        <!-- Divider -->
-        <div class="reveal d4" style="border-top:1.5px solid #C2703E;margin-bottom:40px;opacity:0.35;"></div>
-
-        <!-- 2035 vision -->
-        <div class="reveal d5">
-          <p class="font-display" style="font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:#2B2420;line-height:1.3;margin-bottom:24px;">By 2035, we will eliminate the silent performance tax that passes for normal — the burnout, the mental friction, the chronic dissatisfaction.</p>
-          <p style="color:#7A6B5D;font-size:1rem;line-height:1.85;">The shift isn't gradual. It's measurable. It's immediate. And once made, it compounds.</p>
+        <!-- Vision line -->
+        <div class="reveal d4">
+          <p style="color:#C2703E;font-size:1rem;font-weight:600;line-height:1.5;">The shift isn't gradual. It's measurable. It's immediate. And once made, it compounds.</p>
         </div>
 
       </div>
@@ -2659,14 +2720,51 @@
             <h2 class="font-display" style="font-size:clamp(2.4rem,4vw,3.4rem);line-height:1.08;letter-spacing:-0.03em;color:#2B2420;font-weight:700;margin-bottom:8px;">A note from</h2>
             <h2 class="font-display" style="font-size:clamp(2.4rem,4vw,3.4rem);line-height:1.08;letter-spacing:-0.03em;color:#C2703E;font-weight:700;font-style:italic;margin-bottom:32px;">Sumeet Maan</h2>
 
-            <p style="font-size:16px;line-height:1.75;color:#3D3028;margin-bottom:20px;font-weight:500;">I help leaders and teams unlock the highest version of human performance — by training them to command the most valuable asset they have: their intelligence.</p>
+            <p style="font-size:16px;line-height:1.6;color:#3D3028;margin-bottom:16px;font-weight:600;">I dropped a deadly allergy in minutes.<br>No medicine. No surgery. No treatment.</p>
 
-            <p style="font-size:15px;line-height:1.75;color:#5A4A40;margin-bottom:36px;">My work transforms <strong style="color:#2B2420;">chronic stress, burnout, and mental friction</strong> into clarity, emotional strength, and superhuman flow states.</p>
+            <p style="font-size:15px;line-height:1.75;color:#5A4A40;margin-bottom:16px;">Reduced my inflammation by 83% — ESR 36 to 6. Blood test confirmed. Reversed conditions I was told were permanent. Thermal dysregulation that once hospitalized me. Chronic digestion issues. Pain behind my eyes. All cleared.</p>
+
+            <p style="font-size:15px;line-height:1.75;color:#5A4A40;margin-bottom:20px;">I've been to doctors. Done the tests. Struggled with this for 16 years. Did not expect it to clear in minutes. But it did.</p>
+
+            <div style="border-left:2px solid rgba(194,112,62,0.35);padding-left:20px;margin-bottom:20px;">
+              <p style="font-size:15px;line-height:1.8;color:#5A4A40;margin:0;">Here's what I learned. Every problem — health, wealth, relationships — requires <em>you</em> to define it and persist it. An event appears. Then you claim it: <em>This is MY anxiety. MY problem.</em> That's the installation. That's when it becomes yours to carry.<br><br>I didn't heal my allergy by fighting it. I stopped creating it. Stopped fueling fear.<br><br>Calm, ease, health — that's our baseline. We just deviate from it.</p>
+            </div>
+
+            <p style="font-size:15px;line-height:1.75;color:#5A4A40;margin-bottom:20px;">Now I help high performers do the same. Not manage problems. <strong>Dissolve them.</strong> Health blocks. Wealth blocks. Performance blocks. All require you to believe the event is a problem. Remove that belief — and the architecture collapses.</p>
+
+            <!-- Results list -->
+            <div style="background:rgba(194,112,62,0.06);border:1px solid rgba(194,112,62,0.22);border-radius:14px;padding:20px 24px;margin-bottom:20px;">
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:0.12em;font-weight:700;color:#C2703E;margin-bottom:14px;">Documented results</p>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="display:flex;gap:12px;align-items:flex-start;">
+                  <span style="color:#C2703E;font-weight:700;flex-shrink:0;line-height:1.6;">→</span>
+                  <p style="font-size:14px;color:#3D3028;margin:0;line-height:1.6;"><strong>Deadly allergy</strong> — dropped in minutes. No medicine.</p>
+                </div>
+                <div style="display:flex;gap:12px;align-items:flex-start;">
+                  <span style="color:#C2703E;font-weight:700;flex-shrink:0;line-height:1.6;">→</span>
+                  <p style="font-size:14px;color:#3D3028;margin:0;line-height:1.6;"><strong>Inflammation (ESR)</strong> — 83% drop, 36 → 6 mm/hr <span style="color:#7A6B5D;font-size:12px;">(blood test confirmed)</span></p>
+                </div>
+                <div style="display:flex;gap:12px;align-items:flex-start;">
+                  <span style="color:#C2703E;font-weight:700;flex-shrink:0;line-height:1.6;">→</span>
+                  <p style="font-size:14px;color:#3D3028;margin:0;line-height:1.6;"><strong>Thermal dysregulation</strong> — previously hospitalized. Cleared.</p>
+                </div>
+                <div style="display:flex;gap:12px;align-items:flex-start;">
+                  <span style="color:#C2703E;font-weight:700;flex-shrink:0;line-height:1.6;">→</span>
+                  <p style="font-size:14px;color:#3D3028;margin:0;line-height:1.6;"><strong>Chronic digestion, pain behind eyes</strong> — resolved</p>
+                </div>
+                <div style="display:flex;gap:12px;align-items:flex-start;">
+                  <span style="color:#C2703E;font-weight:700;flex-shrink:0;line-height:1.6;">→</span>
+                  <p style="font-size:14px;color:#3D3028;margin:0;line-height:1.6;"><strong>Cat allergy</strong> — commanded state in real time. No reaction. No Allegra.</p>
+                </div>
+              </div>
+            </div>
+
+            <p style="font-size:15px;line-height:1.75;color:#5A4A40;margin-bottom:28px;">The moment I knew it was real: I was with a cat I was severely allergic to. I commanded the state — in real time. The reaction stopped. No Allegra. No drama.</p>
 
             <!-- Mission blockquote -->
             <div style="border-left:3px solid #C2703E;padding:20px 24px;background:rgba(194,112,62,0.06);border-radius:0 12px 12px 0;margin-bottom:36px;">
-              <p style="font-size:10px;text-transform:uppercase;letter-spacing:0.12em;font-weight:600;color:#C2703E;margin-bottom:10px;">My Mission</p>
-              <p class="font-display" style="font-size:18px;line-height:1.6;color:#2B2420;font-style:italic;font-weight:600;margin:0;">End silent dissatisfaction. End inner conflict. Unlock peak superhuman potential at scale.</p>
+              <p style="font-size:10px;text-transform:uppercase;letter-spacing:0.12em;font-weight:600;color:#C2703E;margin-bottom:10px;">The Root</p>
+              <p class="font-display" style="font-size:17px;line-height:1.65;color:#2B2420;font-style:italic;font-weight:600;margin:0;">All of it — health, performance, relationships — sits under one baseline. When the intelligence state is zero, everything downstream resolves. If I can do it, you can too.</p>
             </div>
 
             <a href="https://www.linkedin.com/in/sumeetmaan/" target="_blank" rel="noopener noreferrer"
@@ -3308,8 +3406,9 @@
       const heroLines = [
         { text: "Helping Leaders & Teams", color: "#fff" },
         { text: "Turn Mental Chaos into", color: "#CCCCCC" },
-        { text: "Effortless Peak Performance", color: "#C2703E" },
-        { text: "& CxO-level Confidence", color: "#fff" },
+        { text: "Effortless Peak Performance,", color: "#C2703E" },
+        { text: "Optimal Health,", color: "#D4895C" },
+        { text: "and CxO-Level Confidence", color: "#fff" },
       ];
 
       const headline = document.getElementById("hero-headline");
@@ -3475,6 +3574,8 @@
             btn.style.opacity = '1';
             btn.style.cursor = 'default';
             contactForm.reset();
+            // Meta Pixel — Lead event on successful form submission
+            if (typeof fbq === 'function') { fbq('track', 'Lead'); }
           })
           .catch(function() {
             btn.textContent = 'Something went wrong. Please try again.';
@@ -3684,129 +3785,6 @@
         if (btns.length) btns[0].classList.add('cta-pulse');
       })();
 
-      // ══════════════════════════════════════════
-      // WHAT TO EXPECT — BRAIN SCAN + PILLS
-      // ══════════════════════════════════════════
-      (function () {
-        var CHAOS = [
-          'Chronic Stress', 'Mental Fatigue', 'Brain Fog', 'Always \u201cOn\u201d', 'Frustration',
-          'Delayed Decisions', 'Fear & Anxiety', 'Burnout', 'Low Confidence', 'Emotional Reactivity'
-        ];
-        var PEAK = [
-          'Mental Clarity', 'Deep Focus', 'Inner Stillness', 'Calm Execution',
-          'Presence', 'Zero Friction', 'Peak Intelligence', 'Flow State',
-          'Deep Life Satisfaction', 'CxO-Level Confidence'
-        ];
-        var isPeak = false;
-
-        function renderPills(list, peak) {
-          var container = document.getElementById('wte-pill-list');
-          if (!container) return;
-          container.innerHTML = '';
-          list.forEach(function(label, i) {
-            var el = document.createElement('div');
-            el.style.cssText = 'padding:10px 18px;border-radius:30px;font-size:11px;font-weight:700;letter-spacing:0.1em;opacity:0;transform:translateX(14px);transition:opacity 0.38s ease,transform 0.38s ease;' +
-              (peak
-                ? 'background:rgba(194,112,62,0.08);color:#C2703E;border:1px solid rgba(194,112,62,0.35);'
-                : 'background:rgba(30,10,10,0.7);color:rgba(200,120,80,0.95);border:1px solid rgba(130,50,30,0.3);');
-            el.textContent = label;
-            container.appendChild(el);
-            setTimeout(function(){ el.style.opacity='1'; el.style.transform='translateX(0)'; }, i * 42);
-          });
-        }
-
-        function launchCelebration() {
-          var svg = document.getElementById('brain-svg');
-          if (!svg) return;
-          // Flash ring
-          var wrapper = svg.parentElement;
-          var ring = document.createElement('div');
-          ring.className = 'brain-flash-ring';
-          wrapper.appendChild(ring);
-          setTimeout(function(){ ring.remove(); }, 850);
-
-          // Toast
-          var toast = document.getElementById('wte-toast');
-          if (toast) {
-            toast.classList.remove('show');
-            void toast.offsetWidth;
-            toast.classList.add('show');
-          }
-
-          // Confetti
-          var rect = svg.getBoundingClientRect();
-          var cx = rect.left + rect.width / 2;
-          var cy = rect.top  + rect.height / 2;
-          var colors = ['#C2703E','#FF9944','#FFD700','#fff','#FF6030','#FFAA55'];
-          for (var i = 0; i < 52; i++) {
-            (function(idx) {
-              var p = document.createElement('div');
-              var angle = (idx / 52) * 360 + (Math.random() - 0.5) * 20;
-              var dist  = 70 + Math.random() * 130;
-              var size  = 4 + Math.random() * 7;
-              var px = Math.cos(angle * Math.PI / 180) * dist;
-              var py = Math.sin(angle * Math.PI / 180) * dist;
-              p.className = 'confetti-piece';
-              p.style.cssText = 'left:' + cx + 'px;top:' + cy + 'px;width:' + size + 'px;height:' + size + 'px;' +
-                'background:' + colors[Math.floor(Math.random() * colors.length)] + ';' +
-                'border-radius:' + (Math.random() > 0.5 ? '50%' : '3px') + ';' +
-                '--cx:' + px.toFixed(0) + 'px;--cy:' + py.toFixed(0) + 'px;--cr:' + Math.floor(Math.random()*360) + 'deg;' +
-                'animation-delay:' + (Math.random() * 0.12) + 's;';
-              document.body.appendChild(p);
-              setTimeout(function(){ p.remove(); }, 1200);
-            })(i);
-          }
-        }
-
-        window.wteSwitch = function () {
-          isPeak = !isPeak;
-          var hint = document.getElementById('brain-click-hint');
-          if (hint) hint.classList.add('hide');
-          var btnB     = document.getElementById('wte-btn-before');
-          var btnA     = document.getElementById('wte-btn-after');
-          var bg       = document.getElementById('wte-bg');
-          var caption  = document.getElementById('wte-scan-caption');
-          var brainFill    = document.getElementById('brain-fill-path');
-          var brainOverlay = document.getElementById('brain-fill-overlay');
-          var brainOutline = document.getElementById('brain-outline-path');
-          var sulci        = document.querySelectorAll('.brain-sulcus');
-          var beam         = document.getElementById('brain-scan-beam');
-          var beamGrad     = document.getElementById('beamGrad');
-
-          if (isPeak) {
-            if (btnB) { btnB.style.background='transparent'; btnB.style.color='#2e2e3e'; }
-            if (btnA) { btnA.style.background='#C2703E'; btnA.style.color='#fff'; }
-            if (bg)   bg.style.background = 'radial-gradient(ellipse at 35% 50%,rgba(194,112,62,0.1) 0%,transparent 60%)';
-            if (caption) { caption.style.opacity='0'; setTimeout(function(){ caption.textContent='\u201cThis is constructive intelligence. Clear, precise, and calm under pressure. This is what the program builds \u2014 and maintains.\u201d'; caption.style.opacity='1'; }, 350); }
-            if (brainFill)    brainFill.setAttribute('fill','url(#brainFillPeak)');
-            if (brainOverlay) brainOverlay.setAttribute('fill','rgba(194,112,62,0.22)');
-            if (brainOutline) brainOutline.setAttribute('stroke','rgba(235,138,50,0.7)');
-            sulci.forEach(function(s){ s.setAttribute('stroke','rgba(235,145,55,0.38)'); });
-            if (beamGrad) { beamGrad.querySelectorAll('stop')[1].setAttribute('stop-color','#FFB340'); beamGrad.querySelectorAll('stop')[2].setAttribute('stop-color','#FFB340'); }
-            launchCelebration();
-          } else {
-            if (btnB) { btnB.style.background='#12121e'; btnB.style.color='#aa4040'; }
-            if (btnA) { btnA.style.background='transparent'; btnA.style.color='#2e2e3e'; }
-            if (bg)   bg.style.background = 'radial-gradient(ellipse at 35% 50%,rgba(140,30,30,0.08) 0%,transparent 60%)';
-            if (caption) { caption.style.opacity='0'; setTimeout(function(){ caption.textContent='\u201cThis is destructive intelligence. Not a character flaw. Not inevitable. A pattern \u2014 and patterns can be dissolved.\u201d'; caption.style.opacity='1'; }, 350); }
-            if (brainFill)    brainFill.setAttribute('fill','url(#brainFillDefault)');
-            if (brainOverlay) brainOverlay.setAttribute('fill','rgba(194,112,62,0)');
-            if (brainOutline) brainOutline.setAttribute('stroke','rgba(160,140,220,0.45)');
-            sulci.forEach(function(s){ s.setAttribute('stroke','rgba(150,130,205,0.3)'); });
-            if (beamGrad) { beamGrad.querySelectorAll('stop')[1].setAttribute('stop-color','#C2703E'); beamGrad.querySelectorAll('stop')[2].setAttribute('stop-color','#C2703E'); }
-          }
-          renderPills(isPeak ? PEAK : CHAOS, isPeak);
-        };
-
-        window.addEventListener('load', function () {
-          renderPills(CHAOS, false);
-        });
-      })();
-
-      window.addEventListener('resize', function () {
-        var c = document.getElementById('wte-canvas');
-        if (c) { c.width = c.offsetWidth; c.height = c.offsetHeight; }
-      });
 
     </script>
   
