@@ -105,4 +105,14 @@ Choice is yours.
 
 How much are you leaving on the table while you figure it out?
 
-\[making money, limiting beliefs, wealth blocks, earning potential, money mindset, financial success, income growth]
+\-------------------------------
+
+If this blog hit you, it's time to collapse what's keeping you stuck.
+
+I'm Sumeet — Billionaire Mind Coach. I help leaders and high performers dissolve the very limitations that keep them stuck. Not manage them. Dissolve them.
+
+This isn't for everyone. It's for people who read this and felt it in their chest. Who are done playing small. Who know they're leaving millions on the table and are ready to stop.
+
+If that's you — apply.
+
+Apply here to work with me → https://forms.gle/sXQC5fPahmRSCBDB8
